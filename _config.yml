@@ -39,7 +39,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace:
@@ -50,7 +50,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 5
+  per_page: 1
   order_by: -date
 
 # Category & Tag
@@ -90,3 +90,8 @@ feed:
   content_limit_delim: ' '
   order_by: -date
   icon: icon.png
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'duotone-light'
+  line_number: false    # default false

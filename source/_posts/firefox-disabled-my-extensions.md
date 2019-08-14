@@ -13,6 +13,7 @@ Firefox—my browser of choice—just updated to version 41 beta. It turns out t
 *   [Privacy Badger (EFF)](https://www.eff.org/privacybadger)
 *   [React Devtools (Facebook)](http://facebook.github.io/react/blog/2015/08/03/new-react-devtools-beta.html)
 
+<!--more-->
 These are popular extensions made by reputable organizations. And the biggest irony is that some of them are extremely useful to _actually_ protect me from internet threats, such as identity theft, insecure communications or third-party tracking. I realize that Mozilla's intentions are good, and I strongly support signing extensions. Just don't dump it on us like this. The overall user experience of the transition is pretty terrible. Here are some ways this move could have been done better:
 
 *   Give plenty of time to extension developers to sign extensions. This move seems pretty sudden. Perhaps developers have known for some time, but the fact that some big developers haven't signed yet could mean that it wasn't that clear.
