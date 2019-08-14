@@ -6,7 +6,7 @@ permalink: refactoring-in-go-using-reflection
 tags: [golang, kubernetes, programming, refactoring, reflection]
 ---
 
-Go's reflection API is quite the unknown for many developers, but it can definitely come in handy in some scenarios. In this article I'll use Go's reflection in a scenario that should feel familiar enough to see practical uses for using reflection.
+Go's reflection API is quite the unknown for many developers. In this article, I'll use it in a familiar scenario to show that it can help you in your day to day coding.
 
 <!-- more -->
 
@@ -21,7 +21,7 @@ c.Deployments(Namespace).List(v1.ListOptions{})
 ... 
 ```
 
-As you can see, it is the exact same call, just to different members `ConfigMaps`, `Pods`, `Deployments`, etc. In the end, we want to have a function `getRandomApiFunction` that returns one of these methods randomly so that we can call it. The problem here is that each of these objects has a different type signature, so we can't write generic code to handle them all (this whole article would be a _lot_ easier to write if Go had Generics...but this is a whole other debate). Let's get our hands dirty and see how we can do this.
+As you can see, it is the same call, just to different members `ConfigMaps`, `Pods`, `Deployments`, etc. In the end, we want to have a function `getRandomApiFunction` that returns one of these methods randomly so that we can call it. The problem here is that each of these objects has a different type signature, so we can't write generic code to handle them all (this whole article would be a _lot_ easier to write if Go had Generics...but this is a whole other debate). Let's get our hands dirty and see how we can do this.
 
 ### The code we found
 
@@ -78,11 +78,15 @@ The code above works, and it's easy enough to understand, but it's a bit cumbers
 type apiFunc func(*kubernetes.Clientset) (interface{}, error)
 ```
 
-So whoever implements the `apiFunc` interface must be a member of the `kubernetes.Clientset` struct and must return a tuple with a value of _any_ kind (hence the `interface{}` declaration), and an error. `List` methods for different objects in all the Kubernetes Client API implement all those restrictions. After that, we find a slice `api_functions_list` containing several identical functions that implement `apiFunc`, each calling the `List` method in a different Kubernetes object. Finally, `getRandomApiFunction` retrieves a random function in the slice and returns it, ready for us to use.
+So whoever implements the `apiFunc` interface must be a member of the `kubernetes.Clientset` struct and must return a tuple with a value of _any_ kind (hence the `interface{}` declaration), and an error. `List` methods for different objects in all the Kubernetes Client API implement all those restrictions.
+
+After that, we find a slice `api_functions_list` containing several identical functions that implement `apiFunc`, each calling the `List` method in a different Kubernetes object. 
+
+Finally, `getRandomApiFunction` retrieves a random function in the slice and returns it, ready for us to use.
 
 ### Something smells funny
 
-The smell in this code is the slice of functions that call Kubernetes API functions. It feels a bit redundant, given that all the functions are nearly identical. If you are a bit like me, it just doesn't sit well with me. There must be a better solution.
+The smell in this code is the slice of functions that call Kubernetes API functions. It is a bit redundant, given that all the functions are nearly identical. There must be a better solution.
 
 ### Let's reflect
 
@@ -90,7 +94,7 @@ We can find a definition of reflection in the [Go Blog](https://blog.golang.org/
 
 > Reflection in computing is the ability of a program to examine its own structure, particularly through types; it's a form of metaprogramming. It's also a great source of confusion.
 
-That article in Go's blog is great for understanding how reflection _really_ works in the language, if you want to understand some of the internals of reflection in Go, go check it out!
+That article is great for understanding how reflection _really_ works. If you want to understand the internals of reflection in Go, check it out!
 
 #### Let's refactor!
 
@@ -197,8 +201,6 @@ func getRandomApiFunction(c *kubernetes.Clientset) (interface{}, error) {
 
 This is just a little test of what's possible with reflection, but I like it because it shows how to apply reflection to solve a simple, common problem. Reflection is not an area of Go that comes up very often, but it can be amazingly useful in some cases where the type system gets in the way of a problem you're trying to solve.
 
-It's also important to keep in mind that reflection is also a wonderful way of shooting yourself in the foot, since it makes it so easy to overrule Go's type system, potentially making your programs harder to debug.
+It's also important to keep in mind that reflection is also a wonderful way of shooting yourself in the foot: it makes it easy to overrule Go's type system, potentially making your programs harder to debug.
 
-If you want some more scenarios where you could use reflection, check out [this post from Jon Bodner](https://medium.com/capital-one-developers/learning-to-use-go-reflection-822a0aed74b7). It comes with nice explanations and examples where Reflection can help in the real world, along with it's main pros and cons.
-
-_Photo by Johny Goerend on Unsplash_
+If you want some more scenarios where you could use reflection, check out [this post from Jon Bodner](https://medium.com/capital-one-developers/learning-to-use-go-reflection-822a0aed74b7). It comes with nice explanations and examples where Reflection can help in the real world, along with its main pros and cons.
