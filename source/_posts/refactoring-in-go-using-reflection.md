@@ -21,7 +21,7 @@ c.Deployments(Namespace).List(v1.ListOptions{})
 ... 
 ```
 
-As you can see, it is the same call, just to different members `ConfigMaps`, `Pods`, `Deployments`, etc. In the end, we want to have a function `getRandomApiFunction` that returns one of these methods randomly so that we can call it. The problem here is that each of these objects has a different type signature, so we can't write generic code to handle them all (this whole article would be a _lot_ easier to write if Go had Generics...but this is a whole other debate). Let's get our hands dirty and see how we can do this.
+As you can see, it is the same call, just to different members `ConfigMaps`, `Pods`, `Deployments`, etc. In the end, we want to have a function `getRandomApiFunction` that returns one of these methods randomly so  we can call it. The problem is that each object has a different type signature, so we can't write generic code to handle them all (this article would be a _lot_ easier to write if Go had Generics...but this is a whole other debate). Let's get our hands dirty and see how we can do this.
 
 ### The code we found
 
@@ -86,7 +86,7 @@ Finally, `getRandomApiFunction` retrieves a random function in the slice and ret
 
 ### Something smells funny
 
-The smell in this code is the slice of functions that call Kubernetes API functions. It is a bit redundant, given that all the functions are nearly identical. There must be a better solution.
+The smell in this code is the slice of functions that call Kubernetes API functions. It is redundant, given that all the functions are nearly identical. There must be a better solution.
 
 ### Let's reflect
 
