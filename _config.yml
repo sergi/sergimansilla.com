@@ -91,7 +91,7 @@ feed:
   order_by: -date
   icon: icon.png
 
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'duotone-light'
-  line_number: false    # default false
+# prism_plugin:
+#   mode: 'preprocess'    # realtime/preprocess
+#   theme: 'solarizedlight'
+#   line_number: false    # default false
