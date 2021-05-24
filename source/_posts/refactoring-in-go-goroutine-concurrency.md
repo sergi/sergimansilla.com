@@ -3,7 +3,7 @@ title: 'Refactoring in Go: goroutine concurrency'
 date: Thu, 09 Aug 2018 21:18:18 +0000
 draft: false
 permalink: refactoring-in-go-goroutine-concurrency
-tags: [concurrency, golang, goroutines, programming]
+tags: [concurrency, golang, goroutines, programming, refactoring]
 ---
 
 Surprise! I write Go these days.
@@ -192,7 +192,7 @@ We created a new type `Metrics` to group the values we want to monitor. We now s
 For the sake of completion, `CalculateStats` could look like this:
 
 ```go
-// Takes amount of requests and errors and returns some stats on a 
+// Takes amount of requests and errors and returns some stats on a
 // `Metrics` struct
 func CalculateStats(results *[]int64, errors *int64) Metrics {
     successfulRequests := len(*results)
