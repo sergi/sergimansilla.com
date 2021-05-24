@@ -2,7 +2,6 @@
 title: 'ABN Amro to Wesabe script'
 date: Wed, 25 Feb 2009 22:37:40 +0000
 draft: false
-permalink: abn-amro-to-wesabe-script
 tags: [programming]
 ---
 
@@ -35,6 +34,6 @@ Which is slightly a less annoying process to me. Its usage is dead simple:
 ```
 You can look at the script source code [here](http://code.google.com/p/assorted-scripts/source/browse/trunk/abn2wesabe.py) or download it directly from [here](http://assorted-scripts.googlecode.com/svn/trunk/abn2wesabe.py).
 
-Many thanks to [Johan Kool](http://www.johankool.nl), who gave me permission to me use part of his [ABN Amro 2 QIF Converter](http://www.johankool.nl/software/abnamro2qif/") script to convert ABN bank statements to QIF (Quicken Interchange Format) files. 
+Many thanks to [Johan Kool](http://www.johankool.nl), who gave me permission to me use part of his [ABN Amro 2 QIF Converter](http://www.johankool.nl/software/abnamro2qif/") script to convert ABN bank statements to QIF (Quicken Interchange Format) files.
 
 **Disclaimer**: This script does not check the validity of the certificate issued by Wesabe, so if any virus, malware, or plain user stupidity causes it to do damage of ANY kind to a computer or a human being, I will accept no responsibility for it. In other words: this software **could** post your financial data to undesired sites, delete all the files in your computer, insult you, burn your house and cause all kinds of innumerable misfortunes to whomever uses it, and I don’t want to be the one to blame. If you are afraid of using it, don’t. You are warned.

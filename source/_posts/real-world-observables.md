@@ -1,7 +1,6 @@
 ---
 title: 'Real World Observables'
 date: Tue, 03 May 2016 18:33:21 +0000
-permalink: real-world-observables
 draft: false
 tags: [ftp, javascript, node.js, nodejs, observables, programming, repl, rxjs]
 ---
@@ -158,7 +157,7 @@ So, `responses` now emits nice and groomed server responses. With `responses` fi
 Requests is a [Subject](http://reactivex.io/documentation/subject.html) where we can push commands, and will output the same commands to us (Remember that a Subject acts as an Observer and as an Observable at the same time).
 
 ```javascript
-this.requests = new Rx.Subject(); 
+this.requests = new Rx.Subject();
 ```
 And we create the only method in the `Ftp` class, the `command` method, which will push commands to the `requests` Subject:
 
@@ -166,13 +165,13 @@ And we create the only method in the `Ftp` class, the `command` method, which wi
 command(cmd) {
   cmd = cmd.trim() + '\r\n';
   this.requests.onNext(cmd);
-} 
+}
 ```
 
 And whenever a new command is emitted by `requests`, we push it in the socket.
 
 ```javascript
-writeToStream(this.requests, this._ftpSocket, 'utf8'); 
+writeToStream(this.requests, this._ftpSocket, 'utf8');
 ```
 
 ### Zip it up!
@@ -180,7 +179,7 @@ writeToStream(this.requests, this._ftpSocket, 'utf8');
 And here comes my favorite part in this whole bunch of code. Since every command receives one reply (except for some commands return "marks", but we'll ignore those in this post), we simply pair every request emitted with every response returned:
 
 ```javascript
-this.tuples = Rx.Observable.zip(this.requests, res.skip(1)); 
+this.tuples = Rx.Observable.zip(this.requests, res.skip(1));
 ```
 
 The [`zip`](http://rxmarbles.com/#zip) operator pairs values from 2 or more observables in the order they are emitted. It guarantees that every command is paired with the response that comes afterwards. Notice how we use `skip` to dismiss the first response from the server. That's because FTP servers emit a welcome message when a client connects. We're not interested in that message, and it would mess up our zipping.

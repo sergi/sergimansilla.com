@@ -2,7 +2,6 @@
 title: 'Implement cursor-swiping in half an afternoon'
 date: Thu, 21 Feb 2013 14:21:20 +0000
 draft: false
-permalink: swipeselection-in-an-afternoon
 tags: [device, firefox, firefoxos, javascript, mobile, os, programming]
 ---
 

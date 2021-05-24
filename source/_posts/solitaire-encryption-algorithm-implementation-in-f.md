@@ -2,7 +2,6 @@
 title: 'Solitaire Encryption Algorithm implementation in F#'
 date: Mon, 13 Oct 2008 21:45:48 +0000
 draft: false
-permalink: solitaire-encryption-algorithm-implementation-in-f
 tags: [algorithm, cryptography, encryption, fsharp]
 ---
 
@@ -21,7 +20,7 @@ After the initial struggle learning the particularities of F# (which are basical
 ```fsharp
 member s.KeyStream (c: char list) f =
   match c with
-  | x :: xs  -> 
+  | x :: xs  ->
     let mutable o = s.getOutput
     while o = jokerA or o = jokerB do
       o <- s.getOutput;
@@ -35,7 +34,7 @@ The code also makes a basic use of some of the different paradigms that F# allow
 
 I borrowed some utility functions from Haskell Prelude (`span`, `splitAt`) to help me with string manipulation, although I am sure that there are dozens of Ocaml libraries that already have a version of them. I am lazy and I just implemented the ones I needed and knew from Haskell.
 
-This implementation is not intended to be efficient and of course there might be better ways to write it, this code was only written for fun and to teach myself some F# discipline, so it is not written in the most optimal way, but in the clearest one. I would gladly accept suggestions of how to improve it. I feel like I just started scratching the surface of what can be done with F# and I can’t wait to unleash its real potential. 
+This implementation is not intended to be efficient and of course there might be better ways to write it, this code was only written for fun and to teach myself some F# discipline, so it is not written in the most optimal way, but in the clearest one. I would gladly accept suggestions of how to improve it. I feel like I just started scratching the surface of what can be done with F# and I can’t wait to unleash its real potential.
 
 The code below is the working algorithm, and you can find the complete source code including tests [here](http://sergimansilla.com/public/Solitaire/Solitaire.fs).
 

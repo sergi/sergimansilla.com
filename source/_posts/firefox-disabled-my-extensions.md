@@ -2,7 +2,6 @@
 title: 'Firefox disabled my extensions'
 date: Thu, 13 Aug 2015 20:25:48 +0000
 draft: false
-permalink: firefox-disabled-my-extensions
 tags: [firefox,rant]
 ---
 

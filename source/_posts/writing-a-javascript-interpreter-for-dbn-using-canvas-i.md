@@ -2,11 +2,10 @@
 title: 'Writing a JavaScript interpreter for DBN using PEG.js and canvas (Part I)'
 date: Tue, 03 Aug 2010 08:03:43 +0000
 draft: false
-permalink: writing-a-javascript-interpreter-for-dbn-using-canvas-i
 tags: [canvas, dbn, html5, interpreter, javascript, javascript, language, lexer, parser, peg, pegjs, programming, token]
 ---
 
-**_In this first part of the article, I will define a grammar for DBN (Design By Numbers) and generate a parser for it that outputs an AST (Abstract Syntax Tree), so I can interpret the syntax tree it later on with JavaScript and draw it into an HTML5 Canvas._** 
+**_In this first part of the article, I will define a grammar for DBN (Design By Numbers) and generate a parser for it that outputs an AST (Abstract Syntax Tree), so I can interpret the syntax tree it later on with JavaScript and draw it into an HTML5 Canvas._**
 
 [John Maeda](http://en.wikipedia.org/wiki/John_Maeda) created the DBN language as a tool to teach programming to non-developers. It was quite an influential language; in fact it was the precursor of the popular [processing](http://en.wikipedia.org/wiki/Processing_%28programming_language%29) language, developed by Maeda’s students [Casey Reas](http://en.wikipedia.org/wiki/Casey_Reas) and Ben Fry, taking many ideas from DBN. Unfortunately, DBN (Design By Numbers) hasn’t been open-sourced and the documentation of it is almost nonexisting, let alone any official specification of the language. There is only [one book](http://www.amazon.com/Design-Numbers-John-Maeda/dp/0262632446) written about it (although a [blurry copy](http://books.google.com/books?id=cptXSf5kS_IC&printsec=frontcover&dq=design+by+numbers&hl=en&ei=9ShZTIDxLsu6OO6D1bAJ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCoQ6AEwAA#v=onepage&q&f=false) exists in google books, censored enough to miss very important parts), and the DBN software amounts to a [Java applet](http://dbn.media.mit.edu/dbn/applet.html) in the official website and a Java program that you can run on your own computer. All this lack of proper information was a challenge enough to get me interested on building a JavaScript interpreter for it (this, and my deep hatred for Java applets) and a good excuse to play with some cool JavaScript technologies.
 
@@ -86,7 +85,7 @@ ws
  = [ \\t]
 
 _ // Matches any number of whitespace/comments in a row
- = (ws / comment)* 
+ = (ws / comment)*
 ```
 
 As you can see, the language is very clear and takes inspiration from regular expressions. The above peg grammar defines strings, integers (DBN has no decimals), points in a 2D canvas, and basic arithmetic (the latter adapted from the arithmetic grammar given at the PEG.js site as example). A rule is composed of several parts: its name, the matching expression and the optional _parser action_, which is enclosed between brackets and transforms the output of the rule. For example, for the `point` rule:
@@ -153,10 +152,10 @@ command
 
 ```
 
-Let’s break the matching expresion down: `_`  
-Match 0 or more whitespace characters. `cmd:[A-Za-z0-9?]+`  
-Match an alphanumeric word that might include the ‘?’ char, and label it as “cmd”. `args:((ws+ value)+)?`  
-Match 0 or more DBN `value` expressions preceded by a whitespace and label them as “args”. `lb+`  
+Let’s break the matching expresion down: `_`
+Match 0 or more whitespace characters. `cmd:[A-Za-z0-9?]+`
+Match an alphanumeric word that might include the ‘?’ char, and label it as “cmd”. `args:((ws+ value)+)?`
+Match 0 or more DBN `value` expressions preceded by a whitespace and label them as “args”. `lb+`
 Match at least one linebreak. In case an expression `command` is matched, we will pass the `cmd` and the `args` results to the parsing expression, who will return an object with some particular properties that manipulate the values in the way we want. In that case we just do some basic filtering to the arrays resulting from the matches. An important thing to note down is that any match gotten using the operators `[]` `*` or `+` will return an array with as many coincidences as there are in the matching expression. That means that we will have to take care of filtering these arrays so we obtain the results we want. A clear example is the `cmd` variable, which returns an array with all the characters of the command name matched, so in the parsing expression we have to join it to form a real string.
 
 ### 3. DBN Blocks

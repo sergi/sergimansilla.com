@@ -2,7 +2,6 @@
 title: 'Virtual list in vanilla JavaScript'
 date: Sun, 12 May 2013 21:20:28 +0000
 draft: false
-permalink: virtual-scrolling
 tags: [rendering,performance,browser,javascript,programming]
 ---
 

@@ -2,7 +2,6 @@
 title: 'The promise of Firefox OS'
 date: Sat, 09 Feb 2013 19:57:30 +0000
 draft: false
-permalink: promise-of-ffos
 tags: [android, firefox, firefoxos, Mobile, Mobile, Technology]
 ---
 

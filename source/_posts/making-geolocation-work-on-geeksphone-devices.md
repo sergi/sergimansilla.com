@@ -2,7 +2,6 @@
 title: 'Making geolocation work on Geeksphone devices'
 date: Thu, 01 May 2014 07:28:11 +0000
 draft: false
-permalink: making-geolocation-work-on-geeksphone-devices
 tags: [firefoxos,hardware,android]
 ---
 
@@ -30,7 +29,7 @@ $ adb devices List of devices attached FC7C80DF device
 Retrieve the following files using _adb pull_:
 
 ```
-$ adb pull /system/b2g/defaults/pref/user.js 
+$ adb pull /system/b2g/defaults/pref/user.js
 $ adb pull /etc/gps.conf
 ```
 
@@ -73,6 +72,6 @@ After doing this my geolocation worked, even indoors. It still takes some second
 
 [How to create a SuplRootCert for supl.google.com](http://blog.cryptomilk.org/2012/07/24/how-to-create-a-suplrootcert-for-supl-google-com/)
 [http://forum.geeksphone.com/index.php?topic=5886.msg62928#msg62928](http://forum.geeksphone.com/index.php?topic=5886.msg62928#msg62928)
-[Bug 955880 - [GPS] GPS is not working anymore](https://bugzilla.mozilla.org/show_bug.cgi?id=955880) 
-[Bug 908151 - [Geeksphone][GPS] Speedup Geolocation response time, currently takes about 10 minutes](https://bugzilla.mozilla.org/show_bug.cgi?id=908151) 
+[Bug 955880 - [GPS] GPS is not working anymore](https://bugzilla.mozilla.org/show_bug.cgi?id=955880)
+[Bug 908151 - [Geeksphone][GPS] Speedup Geolocation response time, currently takes about 10 minutes](https://bugzilla.mozilla.org/show_bug.cgi?id=908151)
 [Forum: How can I enable A-GPS on my Peak?](http://forum.geeksphone.com/index.php?topic=5410.0)``

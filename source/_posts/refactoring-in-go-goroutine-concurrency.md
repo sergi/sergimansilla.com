@@ -2,7 +2,6 @@
 title: 'Refactoring in Go: goroutine concurrency'
 date: Thu, 09 Aug 2018 21:18:18 +0000
 draft: false
-permalink: refactoring-in-go-goroutine-concurrency
 tags: [concurrency, golang, goroutines, programming, refactoring]
 ---
 

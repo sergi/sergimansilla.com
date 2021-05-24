@@ -2,7 +2,6 @@
 title: 'Extending JavaScript with inline unit tests'
 date: Sat, 09 Nov 2013 21:56:57 +0000
 draft: false
-permalink: extending-js-inline-unit-tests
 tags: [javascript, macros, programming, pyret, racket, sweetjs, testing]
 ---
 
