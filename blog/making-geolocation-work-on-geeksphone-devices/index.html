@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Sergi Mansilla's thoughts and articles">
+  
+  
+  <title>Making geolocation work on Geeksphone devices | Sergi Mansilla</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This post is written for my own reference, in order to document the steps for getting geolocation working on Geeksphone phones. For a long time, an easy way to get access to a Firefox OS phone was to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Making geolocation work on Geeksphone devices">
+<meta property="og:url" content="https://sergimansilla.com/blog/making-geolocation-work-on-geeksphone-devices/index.html">
+<meta property="og:site_name" content="Sergi Mansilla">
+<meta property="og:description" content="This post is written for my own reference, in order to document the steps for getting geolocation working on Geeksphone phones. For a long time, an easy way to get access to a Firefox OS phone was to">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2014-05-01T05:28:11.000Z">
+<meta property="article:modified_time" content="2025-11-15T16:31:04.757Z">
+<meta property="article:author" content="Sergi Mansilla">
+<meta property="article:tag" content="android">
+<meta property="article:tag" content="firefoxos">
+<meta property="article:tag" content="hardware">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@sergimansilla">
+  
+    <link rel="alternate" href="/atom.xml" title="Sergi Mansilla" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<script async defer data-domain="sergimansilla.com" src="https://plausible.io/js/plausible.js"></script>
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Sergi Mansilla</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <!-- <a id="main-nav-toggle" class="nav-icon"></a> -->
+        <!-- <a class="main-nav-link" href="/">
+          <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21 13v10h-6v-6h-6v6h-6v-10h-3l12-12 12 12h-3zm-1-5.907v-5.093h-3v2.093l3 3z"/></svg>
+        </a> -->
+        
+        <a class="main-nav-link" href="/about">About</a>
+        
+        <a class="main-nav-link" href="/archives">Articles</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-twitter-link" href="https://twitter.com/sergimansilla" class="nav-icon" title="Twitter">
+          <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-.139 9.237c.209 4.617-3.234 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.08-4.03 3.199-4.03.943 0 1.797.398 2.395 1.037.748-.147 1.451-.42 2.086-.796-.246.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.439.656-.996 1.234-1.639 1.697z"/></svg>
+        </a>
+        <a id="nav-linkedin-link" href="https://www.linkedin.com/in/smansilla/" class="nav-icon" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path fill="white"
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/sergi" title="GitHub">
+          <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg>
+        </a>
+        
+        <a id="nav-rss-link2" class="nav-icon" href="/atom.xml" title="RSS Feed">
+          <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-12.832 20c-1.197 0-2.168-.969-2.168-2.165s.971-2.165 2.168-2.165 2.167.969 2.167 2.165-.97 2.165-2.167 2.165zm5.18 0c-.041-4.029-3.314-7.298-7.348-7.339v-3.207c5.814.041 10.518 4.739 10.561 10.546h-3.213zm5.441 0c-.021-7.063-5.736-12.761-12.789-12.792v-3.208c8.83.031 15.98 7.179 16 16h-3.211z" />
+            </svg>
+        </a>
+        
+
+      </nav>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-making-geolocation-work-on-geeksphone-devices" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Making geolocation work on Geeksphone devices
+    </h1>
+  
+
+    <a href="/blog/making-geolocation-work-on-geeksphone-devices/" class="article-date">
+  <time datetime="2014-05-01T05:28:11.000Z" itemprop="datePublished">May 1, 2014</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>This post is written for my own reference, in order to document the steps for getting geolocation working on Geeksphone phones.</em></p>
+<p>For a long time, an easy way to get access to a Firefox OS phone was to order a <em>Peak</em> or <em>Keon</em> model from Geeksphone. The phone maker jumped on the Firefox OS train early on, offering reasonably priced phones aimed to early adopters.</p>
+<p>These early adopters were in for a disappointing and frustrating surprise, as they would find out that geolocation didn’t work or work haphazardly at best. Such a problem is ridiculous for smartphones sold in 2013, but since those were “developer preview” devices, people didn’t complain too much about it.</p>
+<p>Fast-forward to 2014. Geeksphone is now selling the <a href="http://www.geeksphone.com/#the-phone"><em>Revolution</em></a> model—a pretty good and powerful phone—aimed to end users, but to those users dismay it still has the same geolocation problems. Because I want to eat my own dog food, I am now using the Revolution as my personal phone and the lack of geolocation has been an enormous frustration.</p>
+<p>So, I set out to either make GPS work on my phone or to go back to my trusty iPhone and wait for another phone maker to come up with a Firefox OS compatible phone that matched the Revolution specs.</p>
+<p>After looking at many different sources and thanks to some good pointers from <a href="http://twitter.com/f_jimenez">Fernando Jiménez</a> and <a href="http://twitter.com/mepartoconmigo">Francisco Jordano</a>, I managed to make it work. Kind of. The hardware to make geolocation possible is definitely there, and the problem looks like it is a configuration one.</p>
+<p>I documented below the steps that made geolocation work for me on the Geeksphone Revolution:</p>
+<h4 id="Configuration-steps"><a href="#Configuration-steps" class="headerlink" title="Configuration steps"></a>Configuration steps</h4><p>Connect your phone to the computer, open a terminal and make sure you can see the phone using <em>adb</em>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ adb devices List of devices attached FC7C80DF device</span><br></pre></td></tr></table></figure>
+<p>Retrieve the following files using <em>adb pull</em>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ adb pull /system/b2g/defaults/pref/user.js</span><br><span class="line">$ adb pull /etc/gps.conf</span><br></pre></td></tr></table></figure>
+
+<h4 id="user-js"><a href="#user-js" class="headerlink" title="user.js"></a>user.js</h4><p>Change (or add) the properties <code>geo.gps.supl_server</code> and <code>geo.gps.supl_port</code> in <em>user.js</em> to user Google’s GPS server. My <em>user.js</em> file looks like this:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pref(&#x27;browser.manifestURL&#x27;, &quot;app://system.gaiamobile.org/manifest.webapp&quot;); pref(&#x27;browser.homescreenURL&#x27;, &quot;app://system.gaiamobile.org/index.html&quot;); pref(&#x27;network.http.max-connections-per-server&#x27;, 15); pref(&#x27;dom.mozInputMethod.enabled&#x27;, true); pref(&#x27;ril.debugging.enabled&#x27;, false); pref(&#x27;dom.mms.version&#x27;, 17); pref(&#x27;b2g.wifi.allow_unsafe_wpa_eap&#x27;, true); pref(&#x27;network.dns.localDomains&#x27;, &quot;gaiamobile.org,calendar.gaiamobile.org,fl.gaiamobile.org,camera.gaiamobile.org,communications.gaiamobile.org,gallery.gaiamobile.org,keyboard.gaiamobile.org,video.gaiamobile.org,homescreen.gaiamobile.org,wallpaper.gaiamobile.org,music.gaiamobile.org,bluetooth.gaiamobile.org,ringtones.gaiamobile.org,sms.gaiamobile.org,wappush.gaiamobile.org,email.gaiamobile.org,setringtone.gaiamobile.org,browser.gaiamobile.org,system.gaiamobile.org,clock.gaiamobile.org,settings.gaiamobile.org,pdfjs.gaiamobile.org,costcontrol.gaiamobile.org,marketplace.firefox.com.gaiamobile.org&quot;); pref(&quot;app.update.url&quot;, &quot;http://gpfos.s3.amazonaws.com/revolution/update.xml&quot;); pref(&quot;geo.gps.supl_server&quot;, &quot;supl.google.com&quot;); pref(&quot;geo.gps.supl_port&quot;, 7276); pref(&quot;dom.payment.provider.0.name&quot;, &quot;firefoxmarket&quot;); pref(&quot;dom.payment.provider.0.description&quot;, &quot;marketplace.firefox.com&quot;); pref(&quot;dom.payment.provider.0.uri&quot;, &quot;https://marketplace.firefox.com/mozpay/?req=&quot;); pref(&quot;dom.payment.provider.0.type&quot;, &quot;mozilla/payments/pay/v1&quot;); pref(&quot;dom.payment.provider.0.requestMethod&quot;, &quot;GET&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>####gps.conf</p>
+<p>Replace the contents in <em>gps.conf</em> with the following ones. I got to this particular configuration after looking into different sources, and adapted it to my needs (the NTP server is the Dutch one, for example). I wrote comments to clarify some settings.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Change Country and Region! see http://www.pool.ntp.org/en/ NTP_SERVER=nl.pool.ntp.org NTP_SERVER=0.nl.pool.ntp.org NTP_SERVER=1.nl.pool.ntp.org NTP_SERVER=2.nl.pool.ntp.org NTP_SERVER=3.nl.pool.ntp.org NTP_SERVER=europe.pool.ntp.org NTP_SERVER=0.europe.pool.ntp.org NTP_SERVER=1.europe.pool.ntp.org NTP_SERVER=2.europe.pool.ntp.org NTP_SERVER=3.europe.pool.ntp.org AGPS=http://xtra1.gpsonextra.net/xtra.bin XTRA_SERVER_1=http://xtra1.gpsonextra.net/xtra.bin XTRA_SERVER_2=http://xtra2.gpsonextra.net/xtra.bin XTRA_SERVER_3=http://xtra3.gpsonextra.net/xtra.bin DEFAULT_AGPS_ENABLE=TRUE DEFAULT_USER_PLANE=TRUE DEFAULT_SSL_ENABLE=FALSE REPORT_POSITION_USE_SUPL_REFLOC=1 QOS_ACCURACY=50 QOS_TIME_OUT_STANDALONE=80 QOS_TIME_OUT_AGPS=95 QosHorizontalThreshold=1000 QosVerticalThreshold=500 AssistMethodType=1 AgpsUse=1 AgpsMtConf=0 AgpsMtResponseType=1 AgpsServerType=1 AgpsServerIp=3232235555 # Intermediate position report, 1=enable, 0=disable INTERMEDIATE_POS=1 # Accuracy threshold for intermediate positions # less accurate positions are ignored, 0 for passing all positions ACCURACY_THRES=3000 C2K_HOST=c2k.pde.com C2K_PORT=1234 ### AGPS server settings for Google ### SUPL_HOST=supl.google.com SUPL_PORT=7276 SUPL_SECURE_PORT=7278 SUPL_NO_SECURE_PORT=3425 SUPL_TLS_HOST=FQDN SUPL_TLS_CERT=/etc/SuplRootCert # Carrier tags used universally in GPS configs CURRENT_CARRIER=common # Indoor Positioning Settings # 0: QUIPC disabled, 1: QUIPC enabled, 2: forced QUIPC only QUIPC_ENABLED=1 #Use WiFi 1=”On”, 0=”Off” ENABLE_WIPER=1</span></span><br></pre></td></tr></table></figure>
+
+<p>Now, since Google uses a GeoTrust certificate (you can check doing <code>openssl s_client -connect supl.google.com:7275</code> in the terminal), we need to retrieve it and generate the root certificate we will use in our phone:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://www.geotrust.com/resources/root_certificates/certificates/GeoTrust_Global_CA.pem</span><br><span class="line">$ openssl x509 -inform PEM -in GeoTrust_Global_CA.pem -outform DER -out SuplRootCert</span><br></pre></td></tr></table></figure>
+
+<p>Finally we need to upload all the files we modified into the device and reboot it:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ adb remount</span><br><span class="line">$ adb push user.js /system/b2g/defaults/pref/user.js</span><br><span class="line">$ adb push gps.conf /etc/gps.conf</span><br><span class="line">$ adb push SuplRootCert /etc/SuplRootCert</span><br><span class="line">$ adb reboot</span><br></pre></td></tr></table></figure>
+
+<p>After doing this my geolocation worked, even indoors. It still takes some seconds to retrieve the AGPS fix and sometimes doesn’t get it immediately, but I can say that it works well enough to not drive me mad. Good luck!</p>
+<h4 id="Sources"><a href="#Sources" class="headerlink" title="Sources"></a>Sources</h4><p><a href="http://blog.cryptomilk.org/2012/07/24/how-to-create-a-suplrootcert-for-supl-google-com/">How to create a SuplRootCert for supl.google.com</a><br><a href="http://forum.geeksphone.com/index.php?topic=5886.msg62928#msg62928">http://forum.geeksphone.com/index.php?topic=5886.msg62928#msg62928</a><br><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=955880">Bug 955880 - [GPS] GPS is not working anymore</a><br><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=908151">Bug 908151 - [Geeksphone][GPS] Speedup Geolocation response time, currently takes about 10 minutes</a><br><a href="http://forum.geeksphone.com/index.php?topic=5410.0">Forum: How can I enable A-GPS on my Peak?</a>&#96;&#96;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/" rel="tag">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firefoxos/" rel="tag">firefoxos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hardware/" rel="tag">hardware</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/firefox-disabled-my-extensions/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Firefox disabled my extensions
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/extending-js-inline-unit-tests/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Extending JavaScript with inline unit tests</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2025 Sergi Mansilla<br>
+      Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="/archives" class="mobile-nav-link">Articles</a>
+  
+</nav>
+    
+
+
+
+
+
+  </div>
+</body>
+</html>
