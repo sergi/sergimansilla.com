@@ -1,0 +1,33 @@
+name: Deploy Hexo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main   # or master, or whatever your main branch is
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'   # match what works locally
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run generate   # runs `hexo generate`, outputs to ./public
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
