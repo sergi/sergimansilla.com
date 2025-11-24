@@ -5,7 +5,7 @@ date: 2025-11-15 12:00:00
 
 I’m Sergi Mansilla, an Engineering Leader focused on bringing AI and computing to the edge. I spend most of my time trying to understand how people and technology can work together a little more smoothly.
 
-I serve as Director of Enginering at Qualcomm Technologies, Inc. (via Edge Impulse)[Edge Impulse](https://edgeimpulse.com/), where I help guide the teams building tools that bring AI closer to the physical world — onto devices, sensors, and the edges where computing actually meets life.
+I serve as Director of Enginering at Qualcomm Technologies, Inc. (via [Edge Impulse](https://edgeimpulse.com/)), where I help guide the teams building tools that bring AI closer to the physical world — onto devices, sensors, and the edges where computing actually meets life.
 
 ### What Moves Me
 I’ve always been drawn to systems that empower developers and open new creative space. Sometimes that means working close to hardware, sometimes it means building distributed platforms in the cloud, and sometimes it means finding better ways for teams of people to build things together.
