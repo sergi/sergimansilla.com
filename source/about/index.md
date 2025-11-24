@@ -3,9 +3,9 @@ title: About
 date: 2025-11-15 12:00:00
 ---
 
-I’m **Sergi Mansilla**, an engineer who’s spent most of his life trying to understand how people and technology can work together a little more smoothly.
+I’m Sergi Mansilla, an Engineering Leader focused on bringing AI and computing to the edge. I spend most of my time trying to understand how people and technology can work together a little more smoothly.
 
-These days I’m at Qualcomm Technologies, Inc. by way of [Edge Impulse](https://edgeimpulse.com/), where I help guide the teams building tools that bring AI closer to the physical world — onto devices, sensors, and the edges where computing actually meets life.
+I serve as Director of Enginering at Qualcomm Technologies, Inc. (via Edge Impulse)[Edge Impulse](https://edgeimpulse.com/), where I help guide the teams building tools that bring AI closer to the physical world — onto devices, sensors, and the edges where computing actually meets life.
 
 ### What Moves Me
 I’ve always been drawn to systems that empower developers and open new creative space. Sometimes that means working close to hardware, sometimes it means building distributed platforms in the cloud, and sometimes it means finding better ways for teams of people to build things together.
@@ -13,8 +13,8 @@ I’ve always been drawn to systems that empower developers and open new creativ
 ### My Path
 Over the years I’ve wandered through many corners of the industry:
 - Building and scaling the Edge Impulse platform as it grew into a community of 250,000 people doing incredible things with tiny devices.
-- Leading teams at Glovo tackle real-world problems at large scale.
-- Working at Mozilla on Firefox OS, where I learned how much care and hope goes into open-source projects.
+- Leading teams at Glovo tackle real-world, high-volume problems at large scale.
+- Working at Mozilla on Firefox OS, where I learned how much care and hope goes into large-scale open-source projects.
 - Designing systems at Telenor Digital.
 - Earlier, helping build Cloud9 IDE and leading the interface framework team at TomTom.
 - Co-founding **JustPeace Labs**, a non-profit focused on ethial technology.
