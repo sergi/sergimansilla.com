@@ -6,7 +6,7 @@
   <link href="https://sergimansilla.com/atom.xml" rel="self"/>
   
   <link href="https://sergimansilla.com/"/>
-  <updated>2025-11-22T22:22:16.364Z</updated>
+  <updated>2025-11-24T08:44:37.593Z</updated>
   <id>https://sergimansilla.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://sergimansilla.com/blog/refactoring-in-go-using-reflection/"/>
     <id>https://sergimansilla.com/blog/refactoring-in-go-using-reflection/</id>
     <published>2018-08-24T14:51:23.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.593Z</updated>
     
     
     <summary type="html">&lt;p&gt;Go’s reflection API is quite the unknown for many developers. In this article, I’ll use it in a familiar scenario to show that it can help you in your day to day coding.&lt;/p&gt;</summary>
@@ -46,7 +46,7 @@
     <link href="https://sergimansilla.com/blog/refactoring-in-go-goroutine-concurrency/"/>
     <id>https://sergimansilla.com/blog/refactoring-in-go-goroutine-concurrency/</id>
     <published>2018-08-09T19:18:18.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
     <summary type="html">&lt;p&gt;Surprise! I write Go these days.&lt;/p&gt;
@@ -72,7 +72,7 @@
     <link href="https://sergimansilla.com/blog/react-patterns-privileged-content/"/>
     <id>https://sergimansilla.com/blog/react-patterns-privileged-content/</id>
     <published>2018-04-10T12:00:54.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
     <summary type="html">&lt;p&gt;In the last project I worked on, some parts in the page should only be shown to privileged users. As easy as it would be to just add that bit of logic in a &lt;code&gt;render&lt;/code&gt; method, it would not be idiomatic React, and it would also get cumbersome when the validation logic becomes more complex, besides the fact that we would have to add similar logic in many places in the code. DRY, as they say.&lt;/p&gt;</summary>
@@ -80,9 +80,9 @@
     
     
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="pattern" scheme="https://sergimansilla.com/tags/pattern/"/>
     
@@ -99,7 +99,7 @@
     <link href="https://sergimansilla.com/blog/real-world-observables/"/>
     <id>https://sergimansilla.com/blog/real-world-observables/</id>
     <published>2016-05-03T16:33:21.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
     <summary type="html">&lt;p&gt;Reactive code examples can be mind-blowing. Powerful, succint, robust…they seem to handle many concurrency scenarios without breaking a sweat. But let’s be honest, examples from 30-minute conference talks and short blog posts rarely reflect the messy real world™.&lt;/p&gt;
@@ -109,9 +109,9 @@
     
     
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="nodejs" scheme="https://sergimansilla.com/tags/nodejs/"/>
     
@@ -132,7 +132,7 @@
     <link href="https://sergimansilla.com/blog/firefox-disabled-my-extensions/"/>
     <id>https://sergimansilla.com/blog/firefox-disabled-my-extensions/</id>
     <published>2015-08-13T18:25:48.000Z</published>
-    <updated>2025-11-22T22:22:16.363Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
     <summary type="html">&lt;p&gt;Firefox—my browser of choice—just updated to version 41 beta. It turns out that from this version on, &lt;a href=&quot;https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox?as=u&amp;utm_source=inproduct&quot;&gt;any extension that hasn’t been signed by Mozilla is disabled automatically&lt;/a&gt;. Firefox didn’t warn me about that. I had to go to the Add-ons panel to check why some of my extensions were not working, only to find that they were disabled. And I can’t seem to find a place in the UI to opt out and allow unsigned extensions in my browser. And, you know, it’s not that I use obscure extensions made by shady developers that don’t care about security. The disabled extensions are:&lt;/p&gt;
@@ -157,7 +157,7 @@
     <link href="https://sergimansilla.com/blog/making-geolocation-work-on-geeksphone-devices/"/>
     <id>https://sergimansilla.com/blog/making-geolocation-work-on-geeksphone-devices/</id>
     <published>2014-05-01T05:28:11.000Z</published>
-    <updated>2025-11-22T22:22:16.363Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
       
@@ -184,7 +184,7 @@
     <link href="https://sergimansilla.com/blog/extending-js-inline-unit-tests/"/>
     <id>https://sergimansilla.com/blog/extending-js-inline-unit-tests/</id>
     <published>2013-11-09T20:56:57.000Z</published>
-    <updated>2025-11-22T22:22:16.363Z</updated>
+    <updated>2025-11-24T08:44:37.591Z</updated>
     
     
       
@@ -198,9 +198,9 @@
     
     
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="macros" scheme="https://sergimansilla.com/tags/macros/"/>
     
@@ -219,7 +219,7 @@
     <link href="https://sergimansilla.com/blog/test-coverage-node/"/>
     <id>https://sergimansilla.com/blog/test-coverage-node/</id>
     <published>2013-06-19T19:13:00.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.593Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;Note: This blog post is inspired on &lt;a href=&quot;http://xseignard.github.io/2013/04/25/quality-analysis-on-node.js-projects-with-mocha-istanbul-and-sonar/&quot;&gt;Xavier Seignard’s blog post&lt;/a&gt;. He gives a longer introduction on it, and integrates it together with &lt;a href=&quot;http://www.sonarqube.org/&quot;&gt;Sonar&lt;/a&gt;. You should check it out.&lt;/strong&gt;&lt;/p&gt;
@@ -228,9 +228,9 @@
     
     
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="testing" scheme="https://sergimansilla.com/tags/testing/"/>
     
@@ -249,7 +249,7 @@
     <link href="https://sergimansilla.com/blog/virtual-scrolling/"/>
     <id>https://sergimansilla.com/blog/virtual-scrolling/</id>
     <published>2013-05-12T19:20:28.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.593Z</updated>
     
     
     <summary type="html">&lt;p&gt;Let’s say you need to show a scrolling list with millions of rows, or even a reasonably big list with visually complex rows, each one composed by several DOM elements or CSS3 effects.&lt;/p&gt;
@@ -258,11 +258,11 @@
     
     
     
+    <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
+    
     <category term="browser" scheme="https://sergimansilla.com/tags/browser/"/>
     
     <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
-    <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
     
     <category term="rendering" scheme="https://sergimansilla.com/tags/rendering/"/>
     
@@ -275,7 +275,7 @@
     <link href="https://sergimansilla.com/blog/swipeselection-in-an-afternoon/"/>
     <id>https://sergimansilla.com/blog/swipeselection-in-an-afternoon/</id>
     <published>2013-02-21T13:21:20.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.593Z</updated>
     
     
       
@@ -289,9 +289,9 @@
     
     
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="firefox" scheme="https://sergimansilla.com/tags/firefox/"/>
     
@@ -310,7 +310,7 @@
     <link href="https://sergimansilla.com/blog/promise-of-ffos/"/>
     <id>https://sergimansilla.com/blog/promise-of-ffos/</id>
     <published>2013-02-09T18:57:30.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -322,9 +322,9 @@
     
     
     
-    <category term="firefox" scheme="https://sergimansilla.com/tags/firefox/"/>
-    
     <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
+    
+    <category term="firefox" scheme="https://sergimansilla.com/tags/firefox/"/>
     
     <category term="firefoxos" scheme="https://sergimansilla.com/tags/firefoxos/"/>
     
@@ -339,7 +339,7 @@
     <link href="https://sergimansilla.com/blog/moving-on/"/>
     <id>https://sergimansilla.com/blog/moving-on/</id>
     <published>2013-01-29T19:04:18.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
     <summary type="html">&lt;p&gt;A little bit more than two years ago I was sitting on a meeting room, listening to Ruben Daniels and Rik Arends, the two founders of the company I was considering to join, &lt;a href=&quot;http://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;. These were two of the smartest, most inspiring people I’ve met, and they were working hard on a ground-breaking concept: a full-fledged development environment that run in the browser, and in the cloud. At the time, that sounded wildly adventurous, to say the least. But the challenges were so many, the concept so revolutionary and the people so inspiring that I joined the company two weeks after that conversation. &lt;/p&gt;</summary>
@@ -362,7 +362,7 @@
     <link href="https://sergimansilla.com/blog/nodejs-conference-italy-2012/"/>
     <id>https://sergimansilla.com/blog/nodejs-conference-italy-2012/</id>
     <published>2012-11-12T19:08:36.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
       
@@ -393,7 +393,7 @@
     <link href="https://sergimansilla.com/blog/my-talk-at-dyncon-2011/"/>
     <id>https://sergimansilla.com/blog/my-talk-at-dyncon-2011/</id>
     <published>2011-04-04T17:09:04.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
       
@@ -407,9 +407,9 @@
     
     
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="conference" scheme="https://sergimansilla.com/tags/conference/"/>
     
@@ -424,7 +424,7 @@
     <link href="https://sergimansilla.com/blog/dynamically-generating-midi-in-javascript/"/>
     <id>https://sergimansilla.com/blog/dynamically-generating-midi-in-javascript/</id>
     <published>2010-11-08T21:09:38.000Z</published>
-    <updated>2025-11-22T22:22:16.363Z</updated>
+    <updated>2025-11-24T08:44:37.591Z</updated>
     
     
       
@@ -438,6 +438,8 @@
     
     
     
+    <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
+    
     <category term="audio" scheme="https://sergimansilla.com/tags/audio/"/>
     
     <category term="browser" scheme="https://sergimansilla.com/tags/browser/"/>
@@ -448,8 +450,6 @@
     
     <category term="midi" scheme="https://sergimansilla.com/tags/midi/"/>
     
-    <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
-    
   </entry>
   
   <entry>
@@ -457,7 +457,7 @@
     <link href="https://sergimansilla.com/blog/writing-a-javascript-interpreter-for-dbn-using-canvas-ii/"/>
     <id>https://sergimansilla.com/blog/writing-a-javascript-interpreter-for-dbn-using-canvas-ii/</id>
     <published>2010-08-20T19:32:04.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.593Z</updated>
     
     
       
@@ -498,7 +498,7 @@
     <link href="https://sergimansilla.com/blog/writing-a-javascript-interpreter-for-dbn-using-canvas-i/"/>
     <id>https://sergimansilla.com/blog/writing-a-javascript-interpreter-for-dbn-using-canvas-i/</id>
     <published>2010-08-03T06:03:43.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.593Z</updated>
     
     
       
@@ -512,9 +512,9 @@
     
     
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="canvas" scheme="https://sergimansilla.com/tags/canvas/"/>
     
@@ -543,7 +543,7 @@
     <link href="https://sergimansilla.com/blog/github-in-catalan/"/>
     <id>https://sergimansilla.com/blog/github-in-catalan/</id>
     <published>2010-07-28T19:34:19.000Z</published>
-    <updated>2025-11-22T22:22:16.363Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
       
@@ -572,7 +572,7 @@
     <link href="https://sergimansilla.com/blog/blog-running-on-jekyll-now/"/>
     <id>https://sergimansilla.com/blog/blog-running-on-jekyll-now/</id>
     <published>2010-04-13T19:35:50.000Z</published>
-    <updated>2025-11-22T22:22:16.363Z</updated>
+    <updated>2025-11-24T08:44:37.591Z</updated>
     
     
       
@@ -601,7 +601,7 @@
     <link href="https://sergimansilla.com/blog/abn-amro-to-wesabe-script/"/>
     <id>https://sergimansilla.com/blog/abn-amro-to-wesabe-script/</id>
     <published>2009-02-25T21:37:40.000Z</published>
-    <updated>2025-11-22T22:22:16.363Z</updated>
+    <updated>2025-11-24T08:44:37.591Z</updated>
     
     
       
@@ -624,7 +624,7 @@
     <link href="https://sergimansilla.com/blog/yql-mashup-with-gwt/"/>
     <id>https://sergimansilla.com/blog/yql-mashup-with-gwt/</id>
     <published>2008-11-16T21:40:04.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.593Z</updated>
     
     
     <summary type="html">&lt;p&gt;Yahoo came up with YQL a few weeks ago, and I think it is a very interesting idea. It is basically a SQL-like language that allows developers to retrieve structured data from multiple Yahoo web services without having to deal with each service particularities; developers can query any service in a generic way, just like they would do retrieving rows and columns from a SQL database.&lt;/p&gt;</summary>
@@ -632,9 +632,9 @@
     
     
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="gwt" scheme="https://sergimansilla.com/tags/gwt/"/>
     
@@ -647,7 +647,7 @@
     <link href="https://sergimansilla.com/blog/solitaire-encryption-algorithm-implementation-in-f/"/>
     <id>https://sergimansilla.com/blog/solitaire-encryption-algorithm-implementation-in-f/</id>
     <published>2008-10-13T19:45:48.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.593Z</updated>
     
     
     <summary type="html">&lt;p&gt;I first read about the &lt;a href=&quot;http://www.schneier.com/solitaire.html&quot;&gt;Solitaire algorithm&lt;/a&gt; in the novel &lt;a href=&quot;http://en.wikipedia.org/wiki/Cryptonomicon&quot;&gt;Cryptonomicon&lt;/a&gt;, by Neal Stephenson. Being a geeky kid fascinated by computers I thought that it was a brilliant idea, but my curiosity didn’t go so far as to make me write an implementation of it (you can find a perl version in the book, which by the way I consider to be another great way to encrypt information).&lt;/p&gt;
@@ -672,7 +672,7 @@
     <link href="https://sergimansilla.com/blog/nth-attempt/"/>
     <id>https://sergimansilla.com/blog/nth-attempt/</id>
     <published>2008-10-08T19:50:36.000Z</published>
-    <updated>2025-11-22T22:22:16.364Z</updated>
+    <updated>2025-11-24T08:44:37.592Z</updated>
     
     
       
