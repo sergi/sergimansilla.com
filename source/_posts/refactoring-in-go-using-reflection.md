@@ -5,7 +5,7 @@ draft: false
 tags: [golang, kubernetes, programming, refactoring, reflection]
 ---
 
-Go's reflection API is quite the unknown for many developers. In this article, I'll use it in a familiar scenario to show that it can help you in your day to day coding.
+Go's reflection API is unfamiliar to many developers. In this article, I'll use it in a familiar scenario to show that it can help you in your day to day coding.
 
 <!-- more -->
 
@@ -120,7 +120,7 @@ var interfaceSlice = []interface{}{
 }
 ```
 
-Now is when it gets interesting. We want to be able to call `List` in any of these objects, regarding of their type signature. We create a function `callListMethodOnInterface`:
+Now is when it gets interesting. We want to be able to call `List` in any of these objects, regardless of their type signature. We create a function `callListMethodOnInterface`:
 
 ```go
 func callListMethodOnInterface(kInterface interface{}) []reflect.Value {

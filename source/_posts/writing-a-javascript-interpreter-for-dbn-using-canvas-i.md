@@ -5,9 +5,9 @@ draft: false
 tags: [canvas, dbn, html5, interpreter, javascript, javascript, language, lexer, parser, peg, pegjs, programming, token]
 ---
 
-**_In this first part of the article, I will define a grammar for DBN (Design By Numbers) and generate a parser for it that outputs an AST (Abstract Syntax Tree), so I can interpret the syntax tree it later on with JavaScript and draw it into an HTML5 Canvas._**
+**_In this first part of the article, I will define a grammar for DBN (Design By Numbers) and generate a parser for it that outputs an AST (Abstract Syntax Tree), so I can interpret the syntax tree later on with JavaScript and draw it into an HTML5 Canvas._**
 
-[John Maeda](http://en.wikipedia.org/wiki/John_Maeda) created the DBN language as a tool to teach programming to non-developers. It was quite an influential language; in fact it was the precursor of the popular [processing](http://en.wikipedia.org/wiki/Processing_%28programming_language%29) language, developed by Maeda’s students [Casey Reas](http://en.wikipedia.org/wiki/Casey_Reas) and Ben Fry, taking many ideas from DBN. Unfortunately, DBN (Design By Numbers) hasn’t been open-sourced and the documentation of it is almost nonexisting, let alone any official specification of the language. There is only [one book](http://www.amazon.com/Design-Numbers-John-Maeda/dp/0262632446) written about it (although a [blurry copy](http://books.google.com/books?id=cptXSf5kS_IC&printsec=frontcover&dq=design+by+numbers&hl=en&ei=9ShZTIDxLsu6OO6D1bAJ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCoQ6AEwAA#v=onepage&q&f=false) exists in google books, censored enough to miss very important parts), and the DBN software amounts to a [Java applet](http://dbn.media.mit.edu/dbn/applet.html) in the official website and a Java program that you can run on your own computer. All this lack of proper information was a challenge enough to get me interested on building a JavaScript interpreter for it (this, and my deep hatred for Java applets) and a good excuse to play with some cool JavaScript technologies.
+[John Maeda](http://en.wikipedia.org/wiki/John_Maeda) created the DBN language as a tool to teach programming to non-developers. It was quite an influential language; in fact it was the precursor of the popular [processing](http://en.wikipedia.org/wiki/Processing_%28programming_language%29) language, developed by Maeda’s students [Casey Reas](http://en.wikipedia.org/wiki/Casey_Reas) and Ben Fry, taking many ideas from DBN. Unfortunately, DBN (Design By Numbers) hasn’t been open-sourced and the documentation is almost nonexistent, let alone any official specification of the language. There is only [one book](http://www.amazon.com/Design-Numbers-John-Maeda/dp/0262632446) written about it (although a [blurry copy](http://books.google.com/books?id=cptXSf5kS_IC&printsec=frontcover&dq=design+by+numbers&hl=en&ei=9ShZTIDxLsu6OO6D1bAJ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCoQ6AEwAA#v=onepage&q&f=false) exists in google books, censored enough to miss very important parts), and the DBN software amounts to a [Java applet](http://dbn.media.mit.edu/dbn/applet.html) in the official website and a Java program that you can run on your own computer. All this lack of proper information was a challenge enough to get me interested on building a JavaScript interpreter for it (this, and my deep hatred for Java applets) and a good excuse to play with some cool JavaScript technologies.
 
 Crash course in PEG.js grammar definitions
 ------------------------------------------
@@ -115,7 +115,7 @@ ws // Matches space and tab characters
 
 ```
 
-`value` will try to sequentially match any of the expressions separated by “/”, and it will return the first sucessful match. The whitespace `ws` rule uses a RegExp construct to match any single space or tab character.
+`value` will try to sequentially match any of the expressions separated by “/”, and it will return the first successful match. The whitespace `ws` rule uses a RegExp construct to match any single space or tab character.
 
 ### 2. DBN Commands
 
@@ -152,7 +152,7 @@ command
 
 ```
 
-Let’s break the matching expresion down: `_`
+Let’s break the matching expression down: `_`
 Match 0 or more whitespace characters. `cmd:[A-Za-z0-9?]+`
 Match an alphanumeric word that might include the ‘?’ char, and label it as “cmd”. `args:((ws+ value)+)?`
 Match 0 or more DBN `value` expressions preceded by a whitespace and label them as “args”. `lb+`

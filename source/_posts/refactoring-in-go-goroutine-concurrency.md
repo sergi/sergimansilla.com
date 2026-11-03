@@ -13,7 +13,7 @@ Lately I've been finding some code out in the wild that uses naive solutions for
 
 ### The scenario
 
-Imagine you want to run a particular number of tasks that are easily to parallelize (no side-effects, no external dependencies, etc.), and you want to store the result of each one of them. The way to do that in Go is with Goroutines.
+Imagine you want to run a particular number of tasks that are easy to parallelize (no side-effects, no external dependencies, etc.), and you want to store the result of each one of them. The way to do that in Go is with Goroutines.
 
 The real-world code I refactored calculated the average DNS latency in our system by calling `net.LookupHost` 100 times. Let's see it.
 
@@ -119,7 +119,7 @@ The code is a bit clearer now. We loop `REQUESTS_LIMIT` times and create a gorou
 
 ### Leveraging WaitGroup and cleaning up
 
-I'm not too happy with the last loop, it looks a bit brittle and Go has more elegant tools that help gather results from spawned gouroutines. One of those is the `WaitGroup`. A `Waitgroup` is a construct that waits for a group of routines to finish, without us doing much on our part. We just increase the `WaitGroup` counter using `WaitGroup.Add` with each goroutine we run, and we call `WaitGroup.Done` when a goroutine is finished.
+I'm not too happy with the last loop, it looks a bit brittle and Go has more elegant tools that help gather results from spawned goroutines. One of those is the `WaitGroup`. A `Waitgroup` is a construct that waits for a group of routines to finish, without us doing much on our part. We just increase the `WaitGroup` counter using `WaitGroup.Add` with each goroutine we run, and we call `WaitGroup.Done` when a goroutine is finished.
 
 ```go
 func AverageLatency(host string) (latency int64, err error) {
@@ -186,7 +186,7 @@ func AverageLatency(host string) Metrics {
 }
 ```
 
-We created a new type `Metrics` to group the values we want to monitor. We now set the `wg` counter to the number of requests we plan to do, and we call `wg.Done` when each goroutine finishes, regardless o whether it was successful or not. Then we wait for all the goroutines to finish. We also extracted all the stats calculations to an external `CalculateStats` function, so that `AverageLatency` is focused on collecting the raw values.
+We created a new type `Metrics` to group the values we want to monitor. We now set the `wg` counter to the number of requests we plan to do, and we call `wg.Done` when each goroutine finishes, regardless of whether it was successful or not. Then we wait for all the goroutines to finish. We also extracted all the stats calculations to an external `CalculateStats` function, so that `AverageLatency` is focused on collecting the raw values.
 
 For the sake of completion, `CalculateStats` could look like this:
 
@@ -289,7 +289,7 @@ Whenever we operate with Goroutines we have to be careful with modifying externa
 
 There are several ways we can solve that in Go, for example:
 
-*   Go back to use a channel instead of a slice to gather latencies
+*   Go back to using a channel instead of a slice to gather latencies
 *   Use Mutexes to regulate access to `results`
 *   Use a channel with a buffer capacity of 1 that acts as a queue, and send latencies there
 

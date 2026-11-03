@@ -5,7 +5,7 @@ draft: false
 tags: [ftp, javascript, node.js, nodejs, observables, programming, repl, rxjs]
 ---
 
-Reactive code examples can be mind-blowing. Powerful, succint, robust...they seem to handle many concurrency scenarios without breaking a sweat. But let's be honest, examples from 30-minute conference talks and short blog posts rarely reflect the messy real world™.
+Reactive code examples can be mind-blowing. Powerful, succinct, robust...they seem to handle many concurrency scenarios without breaking a sweat. But let's be honest, examples from 30-minute conference talks and short blog posts rarely reflect the messy real world™.
 
 In any case, developers get all pumped up about reactive goodness and want to use it in their projects. Alas, they quickly find out that it's not all reactive unicorns and rainbows, and that thinking of state in traditional programs as a sequence of events is not trivial.
 
@@ -225,7 +225,7 @@ TVFS
 ftp#localhost:21>
 ```
 
-Pretty slick! Fortunately, Node.js comes with the `repl` library, which makes creating these kind of programs a breeze:
+Pretty slick! Fortunately, Node.js comes with the `repl` library, which makes creating these kinds of programs a breeze:
 
 ```js
 const repl = require("repl");

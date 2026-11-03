@@ -7,7 +7,7 @@ tags: [firefoxos,hardware,android]
 
 _This post is written for my own reference, in order to document the steps for getting geolocation working on Geeksphone phones._
 
-For a long time, an easy way to get access to a Firefox OS phone was to order a _Peak_ or _Keon_ model from Geeksphone. The phone maker jumped on the Firefox OS train early on, offering reasonably priced phones aimed to early adopters.
+For a long time, an easy way to get access to a Firefox OS phone was to order a _Peak_ or _Keon_ model from Geeksphone. The phone maker jumped on the Firefox OS train early on, offering reasonably priced phones aimed at early adopters.
 
 These early adopters were in for a disappointing and frustrating surprise, as they would find out that geolocation didn't work or work haphazardly at best. Such a problem is ridiculous for smartphones sold in 2013, but since those were "developer preview" devices, people didn't complain too much about it.
 

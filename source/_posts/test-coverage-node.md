@@ -5,7 +5,7 @@ draft: false
 tags: [coverage, istanbul, javascript, lcov, node.js, programming, testing]
 ---
 
-**Note: This blog post is inspired on [Xavier Seignard's blog post](http://xseignard.github.io/2013/04/25/quality-analysis-on-node.js-projects-with-mocha-istanbul-and-sonar/). He gives a longer introduction on it, and integrates it together with [Sonar](http://www.sonarqube.org/). You should check it out.**
+**Note: This blog post is inspired by [Xavier Seignard's blog post](http://xseignard.github.io/2013/04/25/quality-analysis-on-node.js-projects-with-mocha-istanbul-and-sonar/). He gives a longer introduction on it, and integrates it together with [Sonar](http://www.sonarqube.org/). You should check it out.**
 
 Code coverage is convenient to get an overview of how well-tested your program is. I'm going to show you how to set up code coverage using [Mocha](http://visionmedia.github.io/mocha/), [Istanbul](https://github.com/gotwarlost/istanbul) and [LCOV](http://ltp.sourceforge.net/coverage/lcov.php) in two easy steps.
 
