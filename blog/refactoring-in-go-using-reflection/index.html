@@ -7,15 +7,15 @@
   
   <title>Refactoring in Go: Using reflection | Sergi Mansilla</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Go’s reflection API is quite the unknown for many developers. In this article, I’ll use it in a familiar scenario to show that it can help you in your day to day coding.">
+  <meta name="description" content="Go’s reflection API is unfamiliar to many developers. In this article, I’ll use it in a familiar scenario to show that it can help you in your day to day coding.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Refactoring in Go: Using reflection">
 <meta property="og:url" content="https://sergimansilla.com/blog/refactoring-in-go-using-reflection/index.html">
 <meta property="og:site_name" content="Sergi Mansilla">
-<meta property="og:description" content="Go’s reflection API is quite the unknown for many developers. In this article, I’ll use it in a familiar scenario to show that it can help you in your day to day coding.">
+<meta property="og:description" content="Go’s reflection API is unfamiliar to many developers. In this article, I’ll use it in a familiar scenario to show that it can help you in your day to day coding.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-08-24T14:51:23.000Z">
-<meta property="article:modified_time" content="2025-11-24T09:13:54.250Z">
+<meta property="article:modified_time" content="2026-11-03T22:06:46.275Z">
 <meta property="article:author" content="Sergi Mansilla">
 <meta property="article:tag" content="golang">
 <meta property="article:tag" content="kubernetes">
@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest">
   
   
   
@@ -38,7 +38,7 @@
 
 <script async defer data-domain="sergimansilla.com" src="https://plausible.io/js/plausible.js"></script>
   
-<meta name="generator" content="Hexo 8.1.1"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
   <div id="container">
@@ -110,7 +110,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Go’s reflection API is quite the unknown for many developers. In this article, I’ll use it in a familiar scenario to show that it can help you in your day to day coding.</p>
+        <p>Go’s reflection API is unfamiliar to many developers. In this article, I’ll use it in a familiar scenario to show that it can help you in your day to day coding.</p>
 <span id="more"></span>
 
 <h3 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h3><p>Imagine that—for testing purposes—we want to regularly call a method in a random member in the <a href="https://github.com/kubernetes/client-go">Kubernetes Client API</a> to check that the cluster is responding properly to our requests. So, with <code>c</code> being a <code>Kubernetes.Clientset</code>, we want to call a method <code>List</code> in each different member, randomly.</p>
@@ -138,7 +138,7 @@
 <p>Then we create a slice with the set of objects we plan to call the <code>List</code> method on:</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> interfaceSlice = []<span class="keyword">interface</span>&#123;&#125;&#123;</span><br><span class="line">    c.ConfigMaps,</span><br><span class="line">    c.Deployments,</span><br><span class="line">    c.ResourceQuotas,</span><br><span class="line">    c.ReplicaSets,</span><br><span class="line">    c.Services,</span><br><span class="line">    c.ServiceAccounts,</span><br><span class="line">    c.LimitRanges,</span><br><span class="line">    c.Ingresses,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>Now is when it gets interesting. We want to be able to call <code>List</code> in any of these objects, regarding of their type signature. We create a function <code>callListMethodOnInterface</code>:</p>
+<p>Now is when it gets interesting. We want to be able to call <code>List</code> in any of these objects, regardless of their type signature. We create a function <code>callListMethodOnInterface</code>:</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">callListMethodOnInterface</span><span class="params">(kInterface <span class="keyword">interface</span>&#123;&#125;)</span></span> []reflect.Value &#123;</span><br><span class="line">    kInterfaceValue := reflect.ValueOf(kInterface)</span><br><span class="line">    ListMethod := kInterfaceValue.MethodByName(<span class="string">&quot;List&quot;</span>)</span><br><span class="line">    params := []reflect.Value&#123;reflect.ValueOf(v1.ListOptions&#123;&#125;)&#125;</span><br><span class="line">    <span class="keyword">return</span> ListMethod.Call(params)</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">``</span><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span>callListMethodOnInterface<span class="string">` takes a `</span>kInterface<span class="string">` that can be any object, and returns an array of type `</span>reflect.Value<span class="string">`. What&#x27;s happening inside?</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">*   `</span>kInterfaceValue := reflect.ValueOf(kInterface)<span class="string">` First we extract the reflect value of `</span>kInterface<span class="string">`. This gives a value we can use reflection methods on.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">*   `</span>ListMethod := kInterfaceValue.MethodByName(<span class="string">&quot;List&quot;</span>)<span class="string">` Since we know that all these entities have a `</span>List<span class="string">` method, we retrieve it calling `</span>MethodByName<span class="string">` on the reflection value.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">*   The `</span>List<span class="string">` method takes `</span>v1.ListOptions&#123;&#125;<span class="string">` in all cases, so we extract its reflection value and put it into a `</span>reflect.Value<span class="string">` array.</span></span><br><span class="line"><span class="string">*   `</span>ListMethod.Call(params)<span class="string">` is the equivalent of the calls the first version of this program did (e.g. `</span>c.ConfigMaps(Namespace).List(v1.ListOptions&#123;&#125;)<span class="string">`)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Now, how do we use this newly created `</span>callListMethodOnInterface<span class="string">` function? Same as any other function, except for we have to unwrap the reflection values it returns into final values:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span><span class="keyword">go</span></span><br><span class="line"><span class="comment">// The randomization code is identical than before</span></span><br><span class="line">rand.Seed(time.Now().UTC().UnixNano())</span><br><span class="line">randomChoice := rand.Intn(<span class="built_in">len</span>(interfaceSlice))</span><br><span class="line">randomMethod := interfaceSlice[randomChoice].(apiFunc)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Here&#x27;s the call</span></span><br><span class="line">retv := callListMethodOnInterface(randomMethod(Namespace))</span><br><span class="line"><span class="keyword">return</span> retv[<span class="number">0</span>].Interface(), retv[<span class="number">1</span>].Interface().(<span class="type">error</span>)</span><br></pre></td></tr></table></figure>
 
 <p><code>callListMethodOnInterface</code> returns an array of reflect values (<code>[]reflect.Value</code>). In our case, two particular values: an <code>interface{}</code> and a potential <code>error</code> (the same ones as the <code>List</code> method). In order to “unbox” them to comply with the <code>getRandomApiFunction</code> signature, we call the <code>Interface()</code> method on each value, and in case of the <code>error</code> value, we cast it into a Go error. The final code we’ve written is this:</p>
@@ -182,7 +182,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2025 Sergi Mansilla<br>
+      &copy; 2026 Sergi Mansilla<br>
       Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a>
     </div>
   </div>
