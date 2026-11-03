@@ -50,7 +50,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 1
+  per_page: 0
   order_by: -date
 
 # Category & Tag
@@ -89,7 +89,7 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
-  icon: icon.png
+  icon: /images/android-chrome-192x192.png
 
 # prism_plugin:
 #   mode: 'preprocess'    # realtime/preprocess
