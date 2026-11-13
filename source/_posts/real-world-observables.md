@@ -264,6 +264,6 @@ This article may need a couple of reads until everything makes sense. In short, 
 
 If you want to know more about the possibilities of Reactive Programming, I wrote a book about it with everything you need to know to write reactive JavaScript applications :) Go check it out!
 
-<iframe src="https://pragprog.com/products/buy_now_insert/smreactjs5" style="border:0;" border="0px" seamless="" width="155px" height="182px">Loading…</iframe>
+<iframe loading="lazy" src="https://pragprog.com/products/buy_now_insert/smreactjs5" style="border:0;" border="0px" seamless="" width="155px" height="182px">Loading…</iframe>
 
 Find the complete code for this article [here](https://github.com/sergi/simple_ftp). Discussion of this article in [Hacker News](https://news.ycombinator.com/item?id=11624078).
