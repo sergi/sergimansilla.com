@@ -16,8 +16,8 @@
     
     <description>Sergi Mansilla&#39;s thoughts and articles on engineering, AI at the edge, and building software that lasts.</description>
     <language>en</language>
-    <pubDate>Fri, 13 Nov 2026 22:44:59 GMT</pubDate>
-    <lastBuildDate>Fri, 13 Nov 2026 22:44:59 GMT</lastBuildDate>
+    <pubDate>Fri, 24 Aug 2018 14:51:23 GMT</pubDate>
+    <lastBuildDate>Fri, 24 Aug 2018 14:51:23 GMT</lastBuildDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -36,9 +36,9 @@
       
       <category domain="https://sergimansilla.com/tags/golang/">golang</category>
       
-      <category domain="https://sergimansilla.com/tags/refactoring/">refactoring</category>
-      
       <category domain="https://sergimansilla.com/tags/kubernetes/">kubernetes</category>
+      
+      <category domain="https://sergimansilla.com/tags/refactoring/">refactoring</category>
       
       <category domain="https://sergimansilla.com/tags/reflection/">reflection</category>
       
@@ -59,13 +59,13 @@
       
       <category domain="https://sergimansilla.com/tags/programming/">programming</category>
       
-      <category domain="https://sergimansilla.com/tags/concurrency/">concurrency</category>
-      
       <category domain="https://sergimansilla.com/tags/golang/">golang</category>
       
-      <category domain="https://sergimansilla.com/tags/goroutines/">goroutines</category>
-      
       <category domain="https://sergimansilla.com/tags/refactoring/">refactoring</category>
+      
+      <category domain="https://sergimansilla.com/tags/concurrency/">concurrency</category>
+      
+      <category domain="https://sergimansilla.com/tags/goroutines/">goroutines</category>
       
     </item>
     
@@ -255,9 +255,9 @@
       
       <category domain="https://sergimansilla.com/tags/programming/">programming</category>
       
-      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
-      
       <category domain="https://sergimansilla.com/tags/browser/">browser</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
       
       <category domain="https://sergimansilla.com/tags/rendering/">rendering</category>
       
@@ -285,9 +285,9 @@
       
       <category domain="https://sergimansilla.com/tags/programming/">programming</category>
       
-      <category domain="https://sergimansilla.com/tags/firefox/">firefox</category>
-      
       <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/firefox/">firefox</category>
       
       <category domain="https://sergimansilla.com/tags/firefoxos/">firefoxos</category>
       
@@ -343,9 +343,9 @@
       
       <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
       
-      <category domain="https://sergimansilla.com/tags/firefoxos/">firefoxos</category>
-      
       <category domain="https://sergimansilla.com/tags/cloud9/">cloud9</category>
+      
+      <category domain="https://sergimansilla.com/tags/firefoxos/">firefoxos</category>
       
     </item>
     
@@ -429,13 +429,13 @@
       
       <category domain="https://sergimansilla.com/tags/programming/">programming</category>
       
-      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
-      
       <category domain="https://sergimansilla.com/tags/audio/">audio</category>
       
       <category domain="https://sergimansilla.com/tags/browser/">browser</category>
       
       <category domain="https://sergimansilla.com/tags/w3c/">w3c</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
       
       <category domain="https://sergimansilla.com/tags/midi/">midi</category>
       

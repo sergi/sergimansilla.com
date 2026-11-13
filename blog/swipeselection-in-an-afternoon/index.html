@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Implement cursor-swiping in half an afternoon | Sergi Mansilla</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
   <link rel="alternate" href="/atom.xml" title="Sergi Mansilla" type="application/atom+xml">
   
   
@@ -30,11 +31,10 @@
     }]
   }
   </script>
-  
-<!-- hexo injector head_end start --><link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Sergi Mansilla"><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.2">
+<!-- hexo injector head_end start --><link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Sergi Mansilla"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.2">
   <!-- Social sharing metadata (Open Graph, Twitter Cards, JSON-LD) -->
   <meta name="description" content="If you haven’t seen it yet, I suggest that you take a look at this concept video that made the rounds on the internet some months ago: I would pay to have this in my phone. Only, money wouldn’t help…">
-  <meta name="keywords" content="programming, firefox, javascript, firefoxos, device, mobile, os">
+  <meta name="keywords" content="programming, javascript, firefox, firefoxos, device, mobile, os">
   <link rel="canonical" href="https://sergimansilla.com/blog/swipeselection-in-an-afternoon/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Implement cursor-swiping in half an afternoon">
@@ -49,11 +49,11 @@
   <meta property="og:image:alt" content="Sergi Mansilla">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="article:published_time" content="2013-02-21T13:21:20.000Z">
-  <meta property="article:modified_time" content="2026-11-13T22:44:59.690Z">
+  <meta property="article:modified_time" content="2013-02-21T13:21:20.000Z">
   <meta property="article:author" content="Sergi Mansilla">
   <meta property="article:tag" content="programming">
-  <meta property="article:tag" content="firefox">
   <meta property="article:tag" content="javascript">
+  <meta property="article:tag" content="firefox">
   <meta property="article:tag" content="firefoxos">
   <meta property="article:tag" content="device">
   <meta property="article:tag" content="mobile">
@@ -103,8 +103,8 @@
   },
   "inLanguage": "en",
   "datePublished": "2013-02-21T13:21:20.000Z",
-  "dateModified": "2026-11-13T22:44:59.690Z",
-  "keywords": "programming, firefox, javascript, firefoxos, device, mobile, os"
+  "dateModified": "2013-02-21T13:21:20.000Z",
+  "keywords": "programming, javascript, firefox, firefoxos, device, mobile, os"
 }
   </script>
 </head>
@@ -180,10 +180,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>If you haven’t seen it yet, I suggest that you take a look at this concept video that made the rounds on the internet some months ago:</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/RGQTaHGQ04Q" frameborder="0" allowfullscreen title="Cursor-swiping concept video"></iframe></div>
+<div class="video-container"><iframe loading="lazy" src="https://www.youtube.com/embed/RGQTaHGQ04Q" frameborder="0" allowfullscreen title="Cursor-swiping concept video"></iframe></div>
 
 <p>I would pay to have this in my phone. Only, money wouldn’t help since I own an iPhone, and a developer has simply no way to access an internal component like the phone keyboard. Well, it only took a small part of an afternoon to implement a proof of concept of cursor-swiping in Firefox OS. And even if this swipe-selection implementation is only a prototype, it’s perfectly functional and I’ve already gotten used to its convenience. See a rough video I made here:</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/uDzb7HZY2mE" frameborder="0" allowfullscreen title="Cursor-swiping prototype demo"></iframe></div>
+<div class="video-container"><iframe loading="lazy" src="https://www.youtube.com/embed/uDzb7HZY2mE" frameborder="0" allowfullscreen title="Cursor-swiping prototype demo"></iframe></div>
 
 <p>You can check out the code for it in <a href="https://github.com/comoyo/gaia/compare/master...swipe_selection">Comoyo’s Gaia branch on GitHub</a>. I can’t even express how amazing it is to hack the OS of the phone you use and adapt it to your needs in such an easy way and with such a fast development cycle. It makes me excited to think about what will happen once all these JavaScript developers discover that they can hack their phone and contribute to it using their favorite language. <em>Disclaimer: This implementation is in the Gaia fork that I use and I have no idea of whether it will make it into the actual OS eventually, since there are obvious UX implications that might be uncomfortable for some.</em></p>
 

@@ -161,9 +161,6 @@ body {
 #container {
   position: relative;
 }
-.mobile-nav-on {
-  overflow: hidden;
-}
 #wrap {
   height: 100%;
   width: 100%;
@@ -176,9 +173,6 @@ body {
   transition: 0.2s ease-out;
   z-index: 1;
   background: #fff;
-}
-.mobile-nav-on #wrap {
-  left: 280px;
 }
 .article-category-link,
 .archive-year {
@@ -358,72 +352,6 @@ body {
 }
 .main-nav-link #sub-nav {
   float: right;
-}
-.main-nav-link #nav-rss-link:before {
-  content: "\f09e";
-}
-.main-nav-link #nav-search-btn:before {
-  content: "\f002";
-}
-.main-nav-link #search-form-wrap {
-  position: absolute;
-  top: 15px;
-  width: 150px;
-  height: 30px;
-  right: -150px;
-  opacity: 0;
-  -webkit-transition: 0.2s ease-out;
-  -moz-transition: 0.2s ease-out;
-  -ms-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
-}
-.main-nav-link #search-form-wrap.on {
-  opacity: 1;
-  right: 0;
-}
-@media screen and (max-width: 479px) {
-  .main-nav-link #search-form-wrap {
-    width: 100%;
-    right: -100%;
-  }
-}
-.main-nav-link .search-form {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  padding: 5px 15px;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-.main-nav-link .search-form-input {
-  border: none;
-  background: none;
-  color: #373737;
-  width: 100%;
-  font: 13px 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  outline: none;
-}
-.main-nav-link .search-form-input::-webkit-search-results-decoration,
-.main-nav-link .search-form-input::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
-.main-nav-link .search-form-submit {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  margin-top: -7px;
-  font: 13px FontAwesome;
-  border: none;
-  background: none;
-  color: #bbb;
-  cursor: pointer;
-}
-.main-nav-link .search-form-submit:hover,
-.main-nav-link .search-form-submit:focus {
-  color: #777;
 }
 .article {
   margin: 50px 0;
@@ -669,21 +597,6 @@ a.article-title:hover {
 .article-comment-link {
   float: right;
 }
-.article-comment-link:before {
-  content: "\f075";
-  font-family: FontAwesome;
-  padding-right: 8px;
-}
-.article-share-link {
-  cursor: pointer;
-  float: right;
-  margin-left: 20px;
-}
-.article-share-link:before {
-  content: "\f064";
-  font-family: FontAwesome;
-  padding-right: 6px;
-}
 #article-nav {
   position: relative;
 }
@@ -762,97 +675,6 @@ a.article-title:hover {
   font-size: 0.85em;
   line-height: 1.7em;
   margin-top: 0.5em;
-}
-.article-share-box {
-  position: absolute;
-  display: none;
-  background: #fff;
-  -webkit-box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
-  box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
-  border-radius: 3px;
-  margin-left: -145px;
-  overflow: hidden;
-  z-index: 1;
-}
-.article-share-box.on {
-  display: block;
-}
-.article-share-input {
-  width: 100%;
-  background: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font: 14px 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  padding: 0 15px;
-  color: #373737;
-  outline: none;
-  border: 1px solid #ddd;
-  border-radius: 3px 3px 0 0;
-  height: 36px;
-  line-height: 36px;
-}
-.article-share-links {
-  background: #fff;
-}
-.article-share-links:before,
-.article-share-links:after {
-  content: "";
-  display: table;
-}
-.article-share-links:after {
-  clear: both;
-}
-.article-share-facebook,
-.article-share-pinterest,
-.article-share-linkedin {
-  width: 50px;
-  height: 36px;
-  display: block;
-  float: left;
-  position: relative;
-  color: #999;
-  text-shadow: 0 1px #fff;
-}
-.article-share-facebook:before,
-.article-share-pinterest:before,
-.article-share-linkedin:before {
-  font-size: 20px;
-  font-family: FontAwesome;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -10px;
-  margin-left: -10px;
-  text-align: center;
-}
-.article-share-facebook:hover,
-.article-share-pinterest:hover,
-.article-share-linkedin:hover {
-  color: #fff;
-}
-.article-share-facebook:before {
-  content: "\f09a";
-}
-.article-share-facebook:hover {
-  background: #3b5998;
-  text-shadow: 0 1px #2f477a;
-}
-.article-share-pinterest:before {
-  content: "\f0d2";
-}
-.article-share-pinterest:hover {
-  background: #cb2027;
-  text-shadow: 0 1px #a21a1f;
-}
-.article-share-linkedin:before {
-  content: "\f0e1";
-}
-.article-share-linkedin:hover {
-  background: #0077b5;
-  text-shadow: 0 1px #005f91;
 }
 .article-gallery {
   background: #000;
@@ -1229,5 +1051,130 @@ pre .javascript .function {
   }
   .mobile-nav-link:hover {
     color: #fff;
+  }
+}
+
+/* Show the "Sergi Mansilla" header title only on the About page, while
+   keeping the header height so the content below still has breathing room. */
+body.page-home #header-title,
+body.page-post #header-title,
+body.page-archive #header-title,
+body.page-category #header-title,
+body.page-tag #header-title,
+body.page-page:not(.page-about) #header-title {
+  visibility: hidden;
+}
+
+body.page-about #header-title {
+  visibility: visible;
+}
+
+/* The About page already has the site title in the header; hide the
+   duplicate "About" article heading. */
+body.page-about .article-header {
+  display: none;
+}
+
+/* Small monochrome home icon in the header navigation. */
+.home-nav-link {
+  display: flex;
+  float: left;
+  align-items: center;
+  padding: 12px 10px;
+}
+
+.home-nav-link svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* Articles page: single-column list instead of the theme's multi-column cards. */
+
+.archives {
+  column-count: 1;
+  column-gap: 0;
+}
+
+.archives-wrap {
+  margin: 0 0 2.5em;
+}
+
+.archive-year-wrap {
+  margin: 2.5em 0 0.6em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid #373737;
+}
+
+.archives-wrap:first-of-type .archive-year-wrap {
+  margin-top: 0;
+}
+
+.archive-year {
+  color: #373737;
+  font-size: 1.05em;
+  letter-spacing: 0.18em;
+}
+
+.archive-article {
+  border-bottom: 1px solid #e6e6e6;
+  break-inside: avoid;
+}
+
+.archive-article:last-child {
+  border-bottom: 0;
+}
+
+.archive-article-inner {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.archive-article-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25em;
+  padding: 0.7em 0;
+}
+
+.archive-article-date {
+  flex: 0 0 6.5em;
+  margin: 0;
+  color: #999;
+  font-size: 0.78em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.archive-article-date time {
+  font: inherit;
+}
+
+.archive-article-header h1 {
+  margin: 0;
+  font-size: 1.05em;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.archive-article-title {
+  color: #373737;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.archive-article-title:hover {
+  color: #258fb8;
+}
+
+@media screen and (max-width: 479px) {
+  .archive-article-header {
+    display: block;
+  }
+
+  .archive-article-date {
+    display: block;
+    margin-bottom: 0.3em;
   }
 }
