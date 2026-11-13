@@ -12,10 +12,10 @@ I’m Director of Engineering at Edge Impulse, part of Qualcomm Technologies, wh
 Over the years I’ve wandered through many corners of the industry:
 - Building and scaling the [Edge Impulse Physical AI platform](https://www.edgeimpulse.com/) as it grew into a community of 350,000 people doing incredible things with tiny devices.
 - Leading engineering teams at [Nearform](https://nearform.com/).
-- Scaling the platform team at Spanish unicorn [Glovo](https://glovoapp.com/) dring hypergrowth .
+- Scaling the platform team at Spanish unicorn [Glovo](https://glovoapp.com/) during hypergrowth.
 - Working with [Mozilla](https://www.mozilla.org/en-US/) on [Firefox OS](https://wikipedia.org/wiki/Firefox_OS).
 - Designing systems at [Telenor Digital](https://www.telenor.com/).
-- Building [Cloud9 IDE](https://aws.amazon.com/es/cloud9/) (now part of AWS).
+- Building [Cloud9 IDE](https://aws.amazon.com/cloud9/) (now part of AWS).
 - Leading the interface framework team at [TomTom](https://www.tomtom.com/).
 - Co-founding [JustPeace Labs](https://justpeacelabs.org/), a non-profit focused on ethics and human rights in technology.
 
