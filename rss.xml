@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sergi Mansilla</title>
+    <link>https://sergimansilla.com/</link>
+    
+    <image>
+      <url>https://sergimansilla.com/images/feed-icon-144x144.png</url>
+      <title>Sergi Mansilla</title>
+      <link>https://sergimansilla.com/</link>
+    </image>
+    
+    <atom:link href="https://sergimansilla.com/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>Sergi Mansilla&#39;s thoughts and articles on engineering, AI at the edge, and building software that lasts.</description>
+    <language>en</language>
+    <pubDate>Fri, 13 Nov 2026 22:29:17 GMT</pubDate>
+    <lastBuildDate>Fri, 13 Nov 2026 22:29:17 GMT</lastBuildDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Refactoring in Go: Using reflection</title>
+      <link>https://sergimansilla.com/blog/refactoring-in-go-using-reflection/</link>
+      <guid>https://sergimansilla.com/blog/refactoring-in-go-using-reflection/</guid>
+      <pubDate>Fri, 24 Aug 2018 14:51:23 GMT</pubDate>
+      
+      <description>&lt;p&gt;Go’s reflection API is unfamiliar to many developers. In this article, I’ll use it in a familiar scenario to show that it can help you in your day to day coding.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/golang/">golang</category>
+      
+      <category domain="https://sergimansilla.com/tags/refactoring/">refactoring</category>
+      
+      <category domain="https://sergimansilla.com/tags/kubernetes/">kubernetes</category>
+      
+      <category domain="https://sergimansilla.com/tags/reflection/">reflection</category>
+      
+    </item>
+    
+    <item>
+      <title>Refactoring in Go: goroutine concurrency</title>
+      <link>https://sergimansilla.com/blog/refactoring-in-go-goroutine-concurrency/</link>
+      <guid>https://sergimansilla.com/blog/refactoring-in-go-goroutine-concurrency/</guid>
+      <pubDate>Thu, 09 Aug 2018 19:18:18 GMT</pubDate>
+      
+      <description>&lt;p&gt;Surprise! I write Go these days.&lt;/p&gt;
+&lt;p&gt;Lately I’ve been finding some code out in the wild that uses naive solutions for concurrency. Given the times I’ve seen similar patterns, my theory is that it is probably inspired by basic goroutines example code out there.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/concurrency/">concurrency</category>
+      
+      <category domain="https://sergimansilla.com/tags/golang/">golang</category>
+      
+      <category domain="https://sergimansilla.com/tags/goroutines/">goroutines</category>
+      
+      <category domain="https://sergimansilla.com/tags/refactoring/">refactoring</category>
+      
+    </item>
+    
+    <item>
+      <title>React patterns: Privileged Content</title>
+      <link>https://sergimansilla.com/blog/react-patterns-privileged-content/</link>
+      <guid>https://sergimansilla.com/blog/react-patterns-privileged-content/</guid>
+      <pubDate>Tue, 10 Apr 2018 12:00:54 GMT</pubDate>
+      
+      <description>&lt;p&gt;In the last project I worked on, some parts in the page should only be shown to privileged users. As easy as it would be to just add that bit of logic in a &lt;code&gt;render&lt;/code&gt; method, it would not be idiomatic React, and it would also get cumbersome when the validation logic becomes more complex, besides the fact that we would have to add similar logic in many places in the code. DRY, as they say.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/pattern/">pattern</category>
+      
+      <category domain="https://sergimansilla.com/tags/permission/">permission</category>
+      
+      <category domain="https://sergimansilla.com/tags/privileged/">privileged</category>
+      
+      <category domain="https://sergimansilla.com/tags/react/">react</category>
+      
+    </item>
+    
+    <item>
+      <title>Real World Observables</title>
+      <link>https://sergimansilla.com/blog/real-world-observables/</link>
+      <guid>https://sergimansilla.com/blog/real-world-observables/</guid>
+      <pubDate>Tue, 03 May 2016 16:33:21 GMT</pubDate>
+      
+      <description>&lt;p&gt;Reactive code examples can be mind-blowing. Powerful, succinct, robust…they seem to handle many concurrency scenarios without breaking a sweat. But let’s be honest, examples from 30-minute conference talks and short blog posts rarely reflect the messy real world™.&lt;/p&gt;
+&lt;p&gt;In any case, developers get all pumped up about reactive goodness and want to use it in their projects. Alas, they quickly find out that it’s not all reactive unicorns and rainbows, and that thinking of state in traditional programs as a sequence of events is not trivial.&lt;/p&gt;
+&lt;p&gt;I will attempt to shed some light on how to do that by writing a real world example in a few lines of RxJS: An FTP client.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/nodejs/">nodejs</category>
+      
+      <category domain="https://sergimansilla.com/tags/node-js/">node.js</category>
+      
+      <category domain="https://sergimansilla.com/tags/ftp/">ftp</category>
+      
+      <category domain="https://sergimansilla.com/tags/observables/">observables</category>
+      
+      <category domain="https://sergimansilla.com/tags/repl/">repl</category>
+      
+      <category domain="https://sergimansilla.com/tags/rxjs/">rxjs</category>
+      
+    </item>
+    
+    <item>
+      <title>Firefox disabled my extensions</title>
+      <link>https://sergimansilla.com/blog/firefox-disabled-my-extensions/</link>
+      <guid>https://sergimansilla.com/blog/firefox-disabled-my-extensions/</guid>
+      <pubDate>Thu, 13 Aug 2015 18:25:48 GMT</pubDate>
+      
+      <description>&lt;p&gt;Firefox—my browser of choice—just updated to version 41 beta. It turns out that from this version on, &lt;a href=&quot;https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox?as=u&amp;utm_source=inproduct&quot;&gt;any extension that hasn’t been signed by Mozilla is disabled automatically&lt;/a&gt;. Firefox didn’t warn me about that. I had to go to the Add-ons panel to check why some of my extensions were not working, only to find that they were disabled. And I can’t seem to find a place in the UI to opt out and allow unsigned extensions in my browser. And, you know, it’s not that I use obscure extensions made by shady developers that don’t care about security. The disabled extensions are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://agilebits.com/onepassword&quot;&gt;1password (Agilebits)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.eff.org/Https-Everywhere&quot;&gt;HTTPS Everywhere (EFF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.eff.org/privacybadger&quot;&gt;Privacy Badger (EFF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://facebook.github.io/react/blog/2015/08/03/new-react-devtools-beta.html&quot;&gt;React Devtools (Facebook)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/firefox/">firefox</category>
+      
+      <category domain="https://sergimansilla.com/tags/rant/">rant</category>
+      
+    </item>
+    
+    <item>
+      <title>Making geolocation work on Geeksphone devices</title>
+      <link>https://sergimansilla.com/blog/making-geolocation-work-on-geeksphone-devices/</link>
+      <guid>https://sergimansilla.com/blog/making-geolocation-work-on-geeksphone-devices/</guid>
+      <pubDate>Thu, 01 May 2014 05:28:11 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;em&gt;This post is written for my own reference, in order to document the steps for getting geolocation working on Geeksphone</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/firefoxos/">firefoxos</category>
+      
+      <category domain="https://sergimansilla.com/tags/hardware/">hardware</category>
+      
+      <category domain="https://sergimansilla.com/tags/android/">android</category>
+      
+    </item>
+    
+    <item>
+      <title>Extending JavaScript with inline unit tests</title>
+      <link>https://sergimansilla.com/blog/extending-js-inline-unit-tests/</link>
+      <guid>https://sergimansilla.com/blog/extending-js-inline-unit-tests/</guid>
+      <pubDate>Sat, 09 Nov 2013 20:56:57 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;I’ve been checking out &lt;a href=&quot;http://www.pyret.org/&quot;&gt;Pyret&lt;/a&gt;, the new language from the same guys that made &lt;a</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/macros/">macros</category>
+      
+      <category domain="https://sergimansilla.com/tags/pyret/">pyret</category>
+      
+      <category domain="https://sergimansilla.com/tags/racket/">racket</category>
+      
+      <category domain="https://sergimansilla.com/tags/sweetjs/">sweetjs</category>
+      
+      <category domain="https://sergimansilla.com/tags/testing/">testing</category>
+      
+    </item>
+    
+    <item>
+      <title>Add code coverage to your Node.js projects</title>
+      <link>https://sergimansilla.com/blog/test-coverage-node/</link>
+      <guid>https://sergimansilla.com/blog/test-coverage-node/</guid>
+      <pubDate>Wed, 19 Jun 2013 19:13:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;strong&gt;Note: This blog post is inspired by &lt;a href=&quot;http://xseignard.github.io/2013/04/25/quality-analysis-on-node.js-projects-with-mocha-istanbul-and-sonar/&quot;&gt;Xavier Seignard’s blog post&lt;/a&gt;. He gives a longer introduction on it, and integrates it together with &lt;a href=&quot;http://www.sonarqube.org/&quot;&gt;Sonar&lt;/a&gt;. You should check it out.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Code coverage is convenient to get an overview of how well-tested your program is. I’m going to show you how to set up code coverage using &lt;a href=&quot;http://visionmedia.github.io/mocha/&quot;&gt;Mocha&lt;/a&gt;, &lt;a href=&quot;https://github.com/gotwarlost/istanbul&quot;&gt;Istanbul&lt;/a&gt; and &lt;a href=&quot;http://ltp.sourceforge.net/coverage/lcov.php&quot;&gt;LCOV&lt;/a&gt; in two easy steps.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/testing/">testing</category>
+      
+      <category domain="https://sergimansilla.com/tags/coverage/">coverage</category>
+      
+      <category domain="https://sergimansilla.com/tags/istanbul/">istanbul</category>
+      
+      <category domain="https://sergimansilla.com/tags/lcov/">lcov</category>
+      
+      <category domain="https://sergimansilla.com/tags/node-js/">node.js</category>
+      
+    </item>
+    
+    <item>
+      <title>Virtual list in vanilla JavaScript</title>
+      <link>https://sergimansilla.com/blog/virtual-scrolling/</link>
+      <guid>https://sergimansilla.com/blog/virtual-scrolling/</guid>
+      <pubDate>Sun, 12 May 2013 19:20:28 GMT</pubDate>
+      
+      <description>&lt;p&gt;Let’s say you need to show a scrolling list with millions of rows, or even a reasonably big list with visually complex rows, each one composed by several DOM elements or CSS3 effects.&lt;/p&gt;
+&lt;p&gt;If you try to render this the naive way, for example by appending rows into a DOM container with the CSS  &lt;code&gt;overflow&lt;/code&gt; property set to &lt;code&gt;scroll&lt;/code&gt; (or &lt;code&gt;auto&lt;/code&gt;), you will most likely run into performance issues. This is because all the items in the list are cached, thus your memory consumption will certainly go up, and since all the DOM nodes composing the rows of the list are appended in the document, the browser is trying to properly render them all making your CPU pretty busy as you scroll. If these rows change any style say, on hover, you will trigger a &lt;a href=&quot;http://www-archive.mozilla.org/newlayout/doc/reflow.html&quot;&gt;reflow&lt;/a&gt; and the experience will be even more sluggish.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/browser/">browser</category>
+      
+      <category domain="https://sergimansilla.com/tags/rendering/">rendering</category>
+      
+      <category domain="https://sergimansilla.com/tags/performance/">performance</category>
+      
+    </item>
+    
+    <item>
+      <title>Implement cursor-swiping in half an afternoon</title>
+      <link>https://sergimansilla.com/blog/swipeselection-in-an-afternoon/</link>
+      <guid>https://sergimansilla.com/blog/swipeselection-in-an-afternoon/</guid>
+      <pubDate>Thu, 21 Feb 2013 13:21:20 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;If you haven’t seen it yet, I suggest that you take a look at this concept video that made the rounds on the internet some months</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/firefox/">firefox</category>
+      
+      <category domain="https://sergimansilla.com/tags/firefoxos/">firefoxos</category>
+      
+      <category domain="https://sergimansilla.com/tags/device/">device</category>
+      
+      <category domain="https://sergimansilla.com/tags/mobile/">mobile</category>
+      
+      <category domain="https://sergimansilla.com/tags/os/">os</category>
+      
+    </item>
+    
+    <item>
+      <title>The promise of Firefox OS</title>
+      <link>https://sergimansilla.com/blog/promise-of-ffos/</link>
+      <guid>https://sergimansilla.com/blog/promise-of-ffos/</guid>
+      <pubDate>Sat, 09 Feb 2013 18:57:30 GMT</pubDate>
+      
+      <description>&lt;blockquote&gt;
+&lt;p&gt;“But &lt;em&gt;how&lt;/em&gt; is it going to beat Android or iOS?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That’s the reaction many people have when I tell them that I am working on &lt;a href=&quot;http://www.mozilla.org/en-US/firefoxos/&quot;&gt;Firefox OS&lt;/a&gt;, the new mobile operating system from &lt;a href=&quot;http://www.mozilla.org/en-US/&quot;&gt;Mozilla&lt;/a&gt;. It is a logical reaction. After all, we live in times where every major software company and its mother is releasing a mobile platform, struggling to lure developers into their new proprietary environment, APIs, libraries, etc. And indeed, many of these companies &lt;a href=&quot;http://global.blackberry.com/sites.html&quot;&gt;barely make it&lt;/a&gt; or &lt;a href=&quot;http://www.hpwebos.com/us/&quot;&gt;don’t make it at all&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;But Firefox OS will not be directly battling against other mobile platforms. Its main objective is to change the way the world develops mobile apps, and even in the unlikely event that Firefox OS itself disappears in the process, if web-apps become mainstream, it will have succeeded.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
+      
+      <category domain="https://sergimansilla.com/tags/firefox/">firefox</category>
+      
+      <category domain="https://sergimansilla.com/tags/firefoxos/">firefoxos</category>
+      
+      <category domain="https://sergimansilla.com/tags/android/">android</category>
+      
+      <category domain="https://sergimansilla.com/tags/Mobile/">Mobile</category>
+      
+    </item>
+    
+    <item>
+      <title>Moving on</title>
+      <link>https://sergimansilla.com/blog/moving-on/</link>
+      <guid>https://sergimansilla.com/blog/moving-on/</guid>
+      <pubDate>Tue, 29 Jan 2013 19:04:18 GMT</pubDate>
+      
+      <description>&lt;p&gt;A little bit more than two years ago I was sitting in a meeting room, listening to Ruben Daniels and Rik Arends, the two founders of the company I was considering to join, &lt;a href=&quot;http://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;. These were two of the smartest, most inspiring people I’ve met, and they were working hard on a ground-breaking concept: a full-fledged development environment that ran in the browser, and in the cloud. At the time, that sounded wildly adventurous, to say the least. But the challenges were so many, the concept so revolutionary and the people so inspiring that I joined the company two weeks after that conversation.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/life/">life</category>
+      
+      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
+      
+      <category domain="https://sergimansilla.com/tags/firefoxos/">firefoxos</category>
+      
+      <category domain="https://sergimansilla.com/tags/cloud9/">cloud9</category>
+      
+    </item>
+    
+    <item>
+      <title>Nodejsconf in Italy</title>
+      <link>https://sergimansilla.com/blog/nodejs-conference-italy-2012/</link>
+      <guid>https://sergimansilla.com/blog/nodejs-conference-italy-2012/</guid>
+      <pubDate>Mon, 12 Nov 2012 19:08:36 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;Last weekend I was at the &lt;a href=&quot;http://nodejsconf.it/&quot;&gt;Node.js conference&lt;/a&gt; in Brescia, Italy. Like every year the organizers</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/conference/">conference</category>
+      
+      <category domain="https://sergimansilla.com/tags/italy/">italy</category>
+      
+      <category domain="https://sergimansilla.com/tags/nodejs/">nodejs</category>
+      
+    </item>
+    
+    <item>
+      <title>My talk at DynCon 2011</title>
+      <link>https://sergimansilla.com/blog/my-talk-at-dyncon-2011/</link>
+      <guid>https://sergimansilla.com/blog/my-talk-at-dyncon-2011/</guid>
+      <pubDate>Mon, 04 Apr 2011 17:09:04 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;The video with my talk about &lt;a href=&quot;http://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt; at &lt;a href=&quot;http://swdc-central.com/dyncon2011/&quot;&gt;DynCon 2011&lt;/a&gt; is</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/conference/">conference</category>
+      
+      <category domain="https://sergimansilla.com/tags/dyncon/">dyncon</category>
+      
+      <category domain="https://sergimansilla.com/tags/Talks/">Talks</category>
+      
+    </item>
+    
+    <item>
+      <title>Dynamically generating MIDI in JavaScript</title>
+      <link>https://sergimansilla.com/blog/dynamically-generating-midi-in-javascript/</link>
+      <guid>https://sergimansilla.com/blog/dynamically-generating-midi-in-javascript/</guid>
+      <pubDate>Mon, 08 Nov 2010 21:09:38 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;Last weekend I open-sourced a &lt;a href=&quot;https://github.com/sergi/jsmidi&quot;&gt;small side project&lt;/a&gt; consisting of a JavaScript library that</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/audio/">audio</category>
+      
+      <category domain="https://sergimansilla.com/tags/browser/">browser</category>
+      
+      <category domain="https://sergimansilla.com/tags/w3c/">w3c</category>
+      
+      <category domain="https://sergimansilla.com/tags/midi/">midi</category>
+      
+    </item>
+    
+    <item>
+      <title>Writing a JavaScript interpreter for DBN using PEG.js and canvas (Part II)</title>
+      <link>https://sergimansilla.com/blog/writing-a-javascript-interpreter-for-dbn-using-canvas-ii/</link>
+      <guid>https://sergimansilla.com/blog/writing-a-javascript-interpreter-for-dbn-using-canvas-ii/</guid>
+      <pubDate>Fri, 20 Aug 2010 19:32:04 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;strong&gt;In this article I build an interpreter for the DBN language from the parsed AST generated by the grammar we defined &lt;a</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/canvas/">canvas</category>
+      
+      <category domain="https://sergimansilla.com/tags/dbn/">dbn</category>
+      
+      <category domain="https://sergimansilla.com/tags/html5/">html5</category>
+      
+      <category domain="https://sergimansilla.com/tags/interpreter/">interpreter</category>
+      
+      <category domain="https://sergimansilla.com/tags/language/">language</category>
+      
+      <category domain="https://sergimansilla.com/tags/lexer/">lexer</category>
+      
+      <category domain="https://sergimansilla.com/tags/parser/">parser</category>
+      
+      <category domain="https://sergimansilla.com/tags/peg/">peg</category>
+      
+      <category domain="https://sergimansilla.com/tags/pegjs/">pegjs</category>
+      
+    </item>
+    
+    <item>
+      <title>Writing a JavaScript interpreter for DBN using PEG.js and canvas (Part I)</title>
+      <link>https://sergimansilla.com/blog/writing-a-javascript-interpreter-for-dbn-using-canvas-i/</link>
+      <guid>https://sergimansilla.com/blog/writing-a-javascript-interpreter-for-dbn-using-canvas-i/</guid>
+      <pubDate>Tue, 03 Aug 2010 06:03:43 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;In this first part of the article, I will define a grammar for DBN (Design By Numbers) and generate a parser for it that</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/canvas/">canvas</category>
+      
+      <category domain="https://sergimansilla.com/tags/dbn/">dbn</category>
+      
+      <category domain="https://sergimansilla.com/tags/html5/">html5</category>
+      
+      <category domain="https://sergimansilla.com/tags/interpreter/">interpreter</category>
+      
+      <category domain="https://sergimansilla.com/tags/language/">language</category>
+      
+      <category domain="https://sergimansilla.com/tags/lexer/">lexer</category>
+      
+      <category domain="https://sergimansilla.com/tags/parser/">parser</category>
+      
+      <category domain="https://sergimansilla.com/tags/peg/">peg</category>
+      
+      <category domain="https://sergimansilla.com/tags/pegjs/">pegjs</category>
+      
+      <category domain="https://sergimansilla.com/tags/token/">token</category>
+      
+    </item>
+    
+    <item>
+      <title>GitHub in Catalan</title>
+      <link>https://sergimansilla.com/blog/github-in-catalan/</link>
+      <guid>https://sergimansilla.com/blog/github-in-catalan/</guid>
+      <pubDate>Wed, 28 Jul 2010 19:34:19 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;This is awesome. From now on, Catalan users of GitHub can use the website in their native language. Thanks to the Github team initiative</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
+      
+      <category domain="https://sergimansilla.com/tags/catalan/">catalan</category>
+      
+      <category domain="https://sergimansilla.com/tags/github/">github</category>
+      
+      <category domain="https://sergimansilla.com/tags/i18n/">i18n</category>
+      
+    </item>
+    
+    <item>
+      <title>Blog running on Jekyll now</title>
+      <link>https://sergimansilla.com/blog/blog-running-on-jekyll-now/</link>
+      <guid>https://sergimansilla.com/blog/blog-running-on-jekyll-now/</guid>
+      <pubDate>Tue, 13 Apr 2010 19:35:50 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;That’s right, I couldn’t resist switching to &lt;a href=&quot;http://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;. I feel so free now! For those who</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/blog/">blog</category>
+      
+      <category domain="https://sergimansilla.com/tags/jekyll/">jekyll</category>
+      
+      <category domain="https://sergimansilla.com/tags/life/">life</category>
+      
+      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
+      
+    </item>
+    
+    <item>
+      <title>ABN Amro to Wesabe script</title>
+      <link>https://sergimansilla.com/blog/abn-amro-to-wesabe-script/</link>
+      <guid>https://sergimansilla.com/blog/abn-amro-to-wesabe-script/</guid>
+      <pubDate>Wed, 25 Feb 2009 21:37:40 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;a href=&quot;http://www.wesabe.com/&quot;&gt;Wesabe&lt;/a&gt; is a great service. And a very big part of its greatness resides in the fact that it</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+    </item>
+    
+    <item>
+      <title>YQL mashup with GWT</title>
+      <link>https://sergimansilla.com/blog/yql-mashup-with-gwt/</link>
+      <guid>https://sergimansilla.com/blog/yql-mashup-with-gwt/</guid>
+      <pubDate>Sun, 16 Nov 2008 21:40:04 GMT</pubDate>
+      
+      <description>&lt;p&gt;Yahoo came up with YQL a few weeks ago, and I think it is a very interesting idea. It is basically a SQL-like language that allows developers to retrieve structured data from multiple Yahoo web services without having to deal with each service particularities; developers can query any service in a generic way, just like they would do retrieving rows and columns from a SQL database.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/programming/">programming</category>
+      
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/gwt/">gwt</category>
+      
+      <category domain="https://sergimansilla.com/tags/java/">java</category>
+      
+    </item>
+    
+    <item>
+      <title>Solitaire Encryption Algorithm implementation in F#</title>
+      <link>https://sergimansilla.com/blog/solitaire-encryption-algorithm-implementation-in-f/</link>
+      <guid>https://sergimansilla.com/blog/solitaire-encryption-algorithm-implementation-in-f/</guid>
+      <pubDate>Mon, 13 Oct 2008 19:45:48 GMT</pubDate>
+      
+      <description>&lt;p&gt;I first read about the &lt;a href=&quot;http://www.schneier.com/solitaire.html&quot;&gt;Solitaire algorithm&lt;/a&gt; in the novel &lt;a href=&quot;http://en.wikipedia.org/wiki/Cryptonomicon&quot;&gt;Cryptonomicon&lt;/a&gt;, by Neal Stephenson. Being a geeky kid fascinated by computers I thought that it was a brilliant idea, but my curiosity didn’t go so far as to make me write an implementation of it (you can find a perl version in the book, which by the way I consider to be another great way to encrypt information).&lt;/p&gt;
+&lt;p&gt;Solitaire is a &lt;a href=&quot;http://en.wikipedia.org/wiki/Stream_cipher&quot;&gt;Stream Cipher&lt;/a&gt; created by &lt;a href=&quot;http://www.schneier.com/&quot;&gt;Bruce Schneier&lt;/a&gt; and designed to be used with only a deck of cards. No electronic devices are needed and its security is intended to be of military-strength; that means that even if the way to generate&amp;#x2F;decipher messages is manual and might look a bit rudimentary, ideally not even the most powerful government could ever decipher a message generated with Solitaire (although some potential flaws have been &lt;a href=&quot;http://www.ciphergoth.org/crypto/solitaire&quot;&gt;reported&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;So after playing with &lt;a href=&quot;http://research.microsoft.com/fsharp/fsharp.aspx&quot;&gt;F#&lt;/a&gt; lately, I decided to write some non-trivial code in order to see how it suits my coding style and habits, and yet another naive implementation of this curious crypto-algorithm was born.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/algorithm/">algorithm</category>
+      
+      <category domain="https://sergimansilla.com/tags/cryptography/">cryptography</category>
+      
+      <category domain="https://sergimansilla.com/tags/encryption/">encryption</category>
+      
+      <category domain="https://sergimansilla.com/tags/fsharp/">fsharp</category>
+      
+    </item>
+    
+    <item>
+      <title>Nth attempt</title>
+      <link>https://sergimansilla.com/blog/nth-attempt/</link>
+      <guid>https://sergimansilla.com/blog/nth-attempt/</guid>
+      <pubDate>Wed, 08 Oct 2008 19:50:36 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;Yes, I am blogging again. But this time I have a plan. My last blog tried to cover too many things, from my life abroad, to ramblings on</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/life/">life</category>
+      
+    </item>
+    
+  </channel>
+</rss>
