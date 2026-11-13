@@ -5,11 +5,18 @@
 # Site
 title: Sergi Mansilla
 subtitle:
-description:
-keywords:
+description: Sergi Mansilla's thoughts and articles on engineering, AI at the edge, and building software that lasts.
+keywords: Sergi Mansilla, engineering, AI, edge computing, software, JavaScript, reactive programming
 author: Sergi Mansilla
 language: en
 timezone: Europe/Madrid
+
+# Social sharing (Open Graph / Twitter Cards)
+social:
+  bluesky: https://mu.social/profile/sergimansilla.com
+  linkedin: https://www.linkedin.com/in/smansilla/
+  github: https://github.com/sergi
+  image: /images/social-card.jpg
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -70,6 +77,15 @@ time_format: HH:mm:ss
 per_page: 5
 pagination_dir: page
 
+# Archive pages
+## per_page: 0 shows every post on the Articles page (no pagination)
+archive_generator:
+  per_page: 0
+  yearly: true
+  monthly: true
+  daily: false
+  order_by: -date
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -81,15 +97,23 @@ deploy:
   type:
 
 feed:
-  type: atom
-  path: atom.xml
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss.xml
   limit: 0
   hub:
   content:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
-  icon: /images/android-chrome-192x192.png
+  icon: /images/feed-icon-144x144.png
+  # Custom templates: add feed metadata and avoid a bogus Disqus comments link.
+  template:
+    - feed-templates/atom.xml
+    - feed-templates/rss.xml
 
 # prism_plugin:
 #   mode: 'preprocess'    # realtime/preprocess
