@@ -13,6 +13,16 @@ body.page-about #header-title {
   visibility: visible;
 }
 
+/* Only the About page shows a title below the nav bar, so only it needs the
+   taller header. */
+body.page-about #header {
+  height: 100px;
+}
+
+body.page-about .article {
+  margin-top: 24px;
+}
+
 /* The About page already has the site title in the header; hide the
    duplicate "About" article heading. */
 body.page-about .article-header {
@@ -24,7 +34,7 @@ body.page-about .article-header {
   display: flex;
   float: left;
   align-items: center;
-  padding: 12px 10px;
+  padding: 10px;
 }
 
 .home-nav-link svg {
@@ -41,7 +51,7 @@ body.page-about .article-header {
 }
 
 .archives-wrap {
-  margin: 0 0 2.5em;
+  margin: 0;
 }
 
 .archive-year-wrap {
@@ -50,8 +60,15 @@ body.page-about .article-header {
   border-bottom: 2px solid #373737;
 }
 
+/* Match the space above post titles. */
 .archives-wrap:first-of-type .archive-year-wrap {
-  margin-top: 0;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 479px) {
+  .archives-wrap:first-of-type .archive-year-wrap {
+    margin-top: 32px;
+  }
 }
 
 .archive-year {
