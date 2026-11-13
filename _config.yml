@@ -24,6 +24,8 @@ url: https://sergimansilla.com
 root: /
 permalink: blog/:title/
 permalink_defaults:
+pretty_urls:
+  trailing_index: false
 
 # Directory
 source_dir: source
@@ -71,6 +73,9 @@ tag_map:
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
+## Use the post date as the "last updated" date unless a post sets `updated:`
+## in its front matter. Otherwise every build stamps the checkout time.
+updated_option: date
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -114,6 +119,12 @@ feed:
   template:
     - feed-templates/atom.xml
     - feed-templates/rss.xml
+
+sitemap:
+  path: sitemap.xml
+  rel: false
+  tags: false
+  categories: false
 
 # prism_plugin:
 #   mode: 'preprocess'    # realtime/preprocess
