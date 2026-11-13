@@ -36,9 +36,9 @@
       
       <category domain="https://sergimansilla.com/tags/golang/">golang</category>
       
-      <category domain="https://sergimansilla.com/tags/kubernetes/">kubernetes</category>
-      
       <category domain="https://sergimansilla.com/tags/refactoring/">refactoring</category>
+      
+      <category domain="https://sergimansilla.com/tags/kubernetes/">kubernetes</category>
       
       <category domain="https://sergimansilla.com/tags/reflection/">reflection</category>
       
@@ -59,13 +59,13 @@
       
       <category domain="https://sergimansilla.com/tags/programming/">programming</category>
       
-      <category domain="https://sergimansilla.com/tags/golang/">golang</category>
-      
-      <category domain="https://sergimansilla.com/tags/refactoring/">refactoring</category>
-      
       <category domain="https://sergimansilla.com/tags/concurrency/">concurrency</category>
       
+      <category domain="https://sergimansilla.com/tags/golang/">golang</category>
+      
       <category domain="https://sergimansilla.com/tags/goroutines/">goroutines</category>
+      
+      <category domain="https://sergimansilla.com/tags/refactoring/">refactoring</category>
       
     </item>
     
@@ -343,9 +343,9 @@
       
       <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
       
-      <category domain="https://sergimansilla.com/tags/cloud9/">cloud9</category>
-      
       <category domain="https://sergimansilla.com/tags/firefoxos/">firefoxos</category>
+      
+      <category domain="https://sergimansilla.com/tags/cloud9/">cloud9</category>
       
     </item>
     
@@ -367,9 +367,9 @@
       
       
       
-      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
-      
       <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
       
       <category domain="https://sergimansilla.com/tags/conference/">conference</category>
       

@@ -141,11 +141,13 @@ body {
 .outer:after {
   clear: both;
 }
+@media screen and (max-width: 479px) {
+  .outer {
+    padding: 0 20px;
+  }
+}
 .inner {
-  display: inline;
-  float: left;
-  width: 98.76543209876543%;
-  margin: 0 0.617283950617284%;
+  width: 100%;
 }
 .left,
 .alignleft {
@@ -186,16 +188,16 @@ body {
   font-weight: bold;
 }
 .article-entry h1 {
-  font-size: 2em;
-}
-.article-entry h2 {
   font-size: 1.5em;
 }
-.article-entry h3 {
+.article-entry h2 {
   font-size: 1.3em;
 }
+.article-entry h3 {
+  font-size: 1.15em;
+}
 .article-entry h4 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .article-entry h5 {
   font-size: 1em;
@@ -257,24 +259,18 @@ body {
   font-weight: bold;
 }
 #header {
-  height: 100px;
+  height: 40px;
   position: relative;
   view-transition-name: site-header;
 }
-#header:before,
-#header:after {
+#header:before {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   height: 40px;
-}
-#header:before {
   top: 0;
   background: #000;
-}
-#header:after {
-  bottom: 0;
 }
 #header-outer {
   height: 100%;
@@ -320,6 +316,7 @@ body {
 }
 #main-nav {
   float: left;
+  margin-left: -10px;
 }
 .nav-icon,
 .main-nav-link {
@@ -334,6 +331,7 @@ body {
   transition: opacity 0.2s;
   display: block;
   padding: 10px 10px;
+  line-height: 20px;
 }
 .nav-icon:hover,
 .main-nav-link:hover {
@@ -350,11 +348,17 @@ body {
   font-weight: 300;
   letter-spacing: 1px;
 }
-.main-nav-link #sub-nav {
+#sub-nav {
   float: right;
+  margin-right: -10px;
 }
 .article {
   margin: 50px 0;
+}
+@media screen and (max-width: 479px) {
+  .article {
+    margin: 32px 0;
+  }
 }
 .article-inner {
   overflow: hidden;
@@ -390,7 +394,7 @@ body {
 }
 .article-title {
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
   color: #373737;
   line-height: 1.1em;
@@ -398,6 +402,11 @@ body {
   -moz-transition: color 0.2s;
   -ms-transition: color 0.2s;
   transition: color 0.2s;
+}
+@media screen and (max-width: 479px) {
+  .article-title {
+    font-size: 1.6em;
+  }
 }
 a.article-title:hover {
   color: #258fb8;
@@ -414,16 +423,20 @@ a.article-title:hover {
 .article-entry:after {
   clear: both;
 }
+@media screen and (max-width: 479px) {
+  .article-entry {
+    font-size: 18px;
+  }
+}
 .article-entry p,
 .article-entry table {
   line-height: 1.7em;
-  margin: 1.7em 0;
+  margin: 1.2em 0;
 }
 @media screen and (max-width: 479px) {
   .article-entry p,
   .article-entry table {
-    line-height: 1.53em;
-    font-size: 20px;
+    line-height: 1.6;
   }
 }
 .article-entry h1,
@@ -433,15 +446,8 @@ a.article-title:hover {
 .article-entry h5,
 .article-entry h6 {
   font-weight: bold;
-}
-.article-entry h1,
-.article-entry h2,
-.article-entry h3,
-.article-entry h4,
-.article-entry h5,
-.article-entry h6 {
-  line-height: 1.1em;
-  margin: 1.1em 0;
+  line-height: 1.25;
+  margin: 1.8em 0 0.6em;
 }
 .article-entry a {
   color: #258fb8;
@@ -453,8 +459,8 @@ a.article-title:hover {
 .article-entry ul,
 .article-entry ol,
 .article-entry dl {
-  margin-top: 1.7em;
-  margin-bottom: 1.7em;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
 }
 .article-entry img,
 .article-entry video {
@@ -612,20 +618,6 @@ a.article-title:hover {
   #article-nav {
     margin: 50px 0;
   }
-  #article-nav:before {
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -4px;
-    margin-left: -4px;
-    content: "";
-    border-radius: 50%;
-    background: #ddd;
-    -webkit-box-shadow: 0 1px 2px #fff;
-    box-shadow: 0 1px 2px #fff;
-  }
 }
 .article-nav-link-wrap {
   text-decoration: none;
@@ -664,7 +656,8 @@ a.article-title:hover {
 .article-nav-caption {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #ddd;
+  color: #999;
+  font-size: 0.7em;
   line-height: 1em;
   font-weight: bold;
 }
@@ -834,33 +827,36 @@ a.article-title:hover {
   color: #ddd;
 }
 #footer {
-  background: #262a30;
-  padding: 50px 0;
-  border-top: 1px solid #ddd;
-  color: #666;
+  padding: 40px 0;
+  border-top: 1px solid #eee;
+  color: #999;
 }
 #footer a {
-  color: #258fb8;
+  color: #666;
   text-decoration: none;
 }
 #footer a:hover {
-  text-decoration: underline;
+  color: #258fb8;
 }
 #footer-info {
   line-height: 1.7em;
-  font-size: 0.85em;
+  font-size: 0.75em;
 }
 .article-entry pre,
 .article-entry .highlight {
   background: #2d2d2d;
-  margin: 0 0px;
-  padding: 15px 0px;
-  border-style: solid;
-  border-color: #ddd;
-  border-width: 1px 0;
+  margin: 1.5em 0;
+  padding: 18px 24px;
+  border-radius: 4px;
   overflow: auto;
   color: #ccc;
   line-height: 27.2px;
+}
+@media screen and (max-width: 479px) {
+  .article-entry pre,
+  .article-entry .highlight {
+    padding: 14px 16px;
+  }
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
@@ -872,21 +868,18 @@ a.article-title:hover {
   font-size: 16px;
 }
 .article-entry code {
-  font-weight: bold;
-  background: #fff;
-  text-shadow: 0 1px #fff;
+  background: #f3f3f3;
   font-family: "PT Mono", "Source Code Pro", Consolas, Menlo, Monaco, monospace;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  padding-left: 2px;
-  padding-right: 2px;
+  font-size: 0.82em;
+  line-height: 1;
+  border-radius: 3px;
+  padding: 0.15em 0.35em;
 }
 .article-entry pre code {
-  border: 0;
   background: none;
-  text-shadow: none;
   padding: 0;
-  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 .article-entry .highlight pre {
   border: none;
@@ -1069,6 +1062,16 @@ body.page-about #header-title {
   visibility: visible;
 }
 
+/* Only the About page shows a title below the nav bar, so only it needs the
+   taller header. */
+body.page-about #header {
+  height: 100px;
+}
+
+body.page-about .article {
+  margin-top: 24px;
+}
+
 /* The About page already has the site title in the header; hide the
    duplicate "About" article heading. */
 body.page-about .article-header {
@@ -1080,7 +1083,7 @@ body.page-about .article-header {
   display: flex;
   float: left;
   align-items: center;
-  padding: 12px 10px;
+  padding: 10px;
 }
 
 .home-nav-link svg {
@@ -1097,7 +1100,7 @@ body.page-about .article-header {
 }
 
 .archives-wrap {
-  margin: 0 0 2.5em;
+  margin: 0;
 }
 
 .archive-year-wrap {
@@ -1106,8 +1109,15 @@ body.page-about .article-header {
   border-bottom: 2px solid #373737;
 }
 
+/* Match the space above post titles. */
 .archives-wrap:first-of-type .archive-year-wrap {
-  margin-top: 0;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 479px) {
+  .archives-wrap:first-of-type .archive-year-wrap {
+    margin-top: 32px;
+  }
 }
 
 .archive-year {
