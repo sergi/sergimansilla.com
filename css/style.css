@@ -110,6 +110,14 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+@view-transition {
+  navigation: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
 html,
 body,
 #container {
@@ -257,6 +265,7 @@ body {
 #header {
   height: 100px;
   position: relative;
+  view-transition-name: site-header;
 }
 #header:before,
 #header:after {
