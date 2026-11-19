@@ -284,9 +284,9 @@
     
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="browser" scheme="https://sergimansilla.com/tags/browser/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="rendering" scheme="https://sergimansilla.com/tags/rendering/"/>
     
@@ -371,9 +371,9 @@
     
     
     
-    <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
-    
     <category term="life" scheme="https://sergimansilla.com/tags/life/"/>
+    
+    <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
     
     <category term="firefoxos" scheme="https://sergimansilla.com/tags/firefoxos/"/>
     
@@ -400,9 +400,9 @@
     
     
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="conference" scheme="https://sergimansilla.com/tags/conference/"/>
     
@@ -464,13 +464,13 @@
     
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
     
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
-    
     <category term="audio" scheme="https://sergimansilla.com/tags/audio/"/>
     
     <category term="browser" scheme="https://sergimansilla.com/tags/browser/"/>
     
     <category term="w3c" scheme="https://sergimansilla.com/tags/w3c/"/>
+    
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="midi" scheme="https://sergimansilla.com/tags/midi/"/>
     
@@ -581,13 +581,13 @@
     
     
     
+    <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
+    
     <category term="catalan" scheme="https://sergimansilla.com/tags/catalan/"/>
     
     <category term="github" scheme="https://sergimansilla.com/tags/github/"/>
     
     <category term="i18n" scheme="https://sergimansilla.com/tags/i18n/"/>
-    
-    <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
     
   </entry>
   
@@ -610,13 +610,13 @@
     
     
     
-    <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
-    
     <category term="blog" scheme="https://sergimansilla.com/tags/blog/"/>
     
     <category term="jekyll" scheme="https://sergimansilla.com/tags/jekyll/"/>
     
     <category term="life" scheme="https://sergimansilla.com/tags/life/"/>
+    
+    <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
     
   </entry>
   
