@@ -16,9 +16,31 @@
     
     <description>Sergi Mansilla&#39;s thoughts and articles on engineering, AI at the edge, and building software that lasts.</description>
     <language>en</language>
-    <pubDate>Fri, 24 Aug 2018 14:51:23 GMT</pubDate>
-    <lastBuildDate>Fri, 24 Aug 2018 14:51:23 GMT</lastBuildDate>
+    <pubDate>Thu, 19 Nov 2026 21:54:58 GMT</pubDate>
+    <lastBuildDate>Thu, 19 Nov 2026 21:54:58 GMT</lastBuildDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Cheap code, expensive trust</title>
+      <link>https://sergimansilla.com/blog/cheap-code-expensive-trust/</link>
+      <guid>https://sergimansilla.com/blog/cheap-code-expensive-trust/</guid>
+      <pubDate>Thu, 19 Nov 2026 21:54:58 GMT</pubDate>
+      
+      <description>AI broke two things teams relied on without noticing: how unwritten rules spread, and how reviewers decide what to trust.</description>
+      
+      
+      
+      
+      
+      <category domain="https://sergimansilla.com/tags/engineering-leadership/">engineering leadership</category>
+      
+      <category domain="https://sergimansilla.com/tags/ai/">ai</category>
+      
+      <category domain="https://sergimansilla.com/tags/code-review/">code review</category>
+      
+      <category domain="https://sergimansilla.com/tags/software-engineering/">software engineering</category>
+      
+    </item>
     
     <item>
       <title>Refactoring in Go: Using reflection</title>
@@ -255,9 +277,9 @@
       
       <category domain="https://sergimansilla.com/tags/programming/">programming</category>
       
-      <category domain="https://sergimansilla.com/tags/browser/">browser</category>
-      
       <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
+      <category domain="https://sergimansilla.com/tags/browser/">browser</category>
       
       <category domain="https://sergimansilla.com/tags/rendering/">rendering</category>
       
@@ -339,9 +361,9 @@
       
       
       
-      <category domain="https://sergimansilla.com/tags/life/">life</category>
-      
       <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
+      
+      <category domain="https://sergimansilla.com/tags/life/">life</category>
       
       <category domain="https://sergimansilla.com/tags/firefoxos/">firefoxos</category>
       
@@ -429,13 +451,13 @@
       
       <category domain="https://sergimansilla.com/tags/programming/">programming</category>
       
+      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
+      
       <category domain="https://sergimansilla.com/tags/audio/">audio</category>
       
       <category domain="https://sergimansilla.com/tags/browser/">browser</category>
       
       <category domain="https://sergimansilla.com/tags/w3c/">w3c</category>
-      
-      <category domain="https://sergimansilla.com/tags/javascript/">javascript</category>
       
       <category domain="https://sergimansilla.com/tags/midi/">midi</category>
       
@@ -543,13 +565,13 @@
       
       
       
-      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
-      
       <category domain="https://sergimansilla.com/tags/catalan/">catalan</category>
       
       <category domain="https://sergimansilla.com/tags/github/">github</category>
       
       <category domain="https://sergimansilla.com/tags/i18n/">i18n</category>
+      
+      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
       
     </item>
     
@@ -571,13 +593,13 @@
       
       
       
+      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
+      
       <category domain="https://sergimansilla.com/tags/blog/">blog</category>
       
       <category domain="https://sergimansilla.com/tags/jekyll/">jekyll</category>
       
       <category domain="https://sergimansilla.com/tags/life/">life</category>
-      
-      <category domain="https://sergimansilla.com/tags/Technology/">Technology</category>
       
     </item>
     

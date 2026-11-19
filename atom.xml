@@ -6,7 +6,7 @@
   <link href="https://sergimansilla.com/atom.xml" rel="self"/>
   
   <link href="https://sergimansilla.com/"/>
-  <updated>2018-08-24T14:51:23.000Z</updated>
+  <updated>2026-11-19T21:54:58.000Z</updated>
   <id>https://sergimansilla.com/</id>
   
   <author>
@@ -16,6 +16,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cheap code, expensive trust</title>
+    <link href="https://sergimansilla.com/blog/cheap-code-expensive-trust/"/>
+    <id>https://sergimansilla.com/blog/cheap-code-expensive-trust/</id>
+    <published>2026-11-19T21:54:58.000Z</published>
+    <updated>2026-11-19T21:54:58.000Z</updated>
+    
+    
+    <summary type="html">AI broke two things teams relied on without noticing: how unwritten rules spread, and how reviewers decide what to trust.</summary>
+    
+    
+    
+    
+    <category term="engineering leadership" scheme="https://sergimansilla.com/tags/engineering-leadership/"/>
+    
+    <category term="ai" scheme="https://sergimansilla.com/tags/ai/"/>
+    
+    <category term="code review" scheme="https://sergimansilla.com/tags/code-review/"/>
+    
+    <category term="software engineering" scheme="https://sergimansilla.com/tags/software-engineering/"/>
+    
+  </entry>
   
   <entry>
     <title>Refactoring in Go: Using reflection</title>
@@ -261,9 +284,9 @@
     
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
     
-    <category term="browser" scheme="https://sergimansilla.com/tags/browser/"/>
-    
     <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
+    
+    <category term="browser" scheme="https://sergimansilla.com/tags/browser/"/>
     
     <category term="rendering" scheme="https://sergimansilla.com/tags/rendering/"/>
     
@@ -348,9 +371,9 @@
     
     
     
-    <category term="life" scheme="https://sergimansilla.com/tags/life/"/>
-    
     <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
+    
+    <category term="life" scheme="https://sergimansilla.com/tags/life/"/>
     
     <category term="firefoxos" scheme="https://sergimansilla.com/tags/firefoxos/"/>
     
@@ -441,13 +464,13 @@
     
     <category term="programming" scheme="https://sergimansilla.com/tags/programming/"/>
     
+    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
+    
     <category term="audio" scheme="https://sergimansilla.com/tags/audio/"/>
     
     <category term="browser" scheme="https://sergimansilla.com/tags/browser/"/>
     
     <category term="w3c" scheme="https://sergimansilla.com/tags/w3c/"/>
-    
-    <category term="javascript" scheme="https://sergimansilla.com/tags/javascript/"/>
     
     <category term="midi" scheme="https://sergimansilla.com/tags/midi/"/>
     
@@ -558,13 +581,13 @@
     
     
     
-    <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
-    
     <category term="catalan" scheme="https://sergimansilla.com/tags/catalan/"/>
     
     <category term="github" scheme="https://sergimansilla.com/tags/github/"/>
     
     <category term="i18n" scheme="https://sergimansilla.com/tags/i18n/"/>
+    
+    <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
     
   </entry>
   
@@ -587,13 +610,13 @@
     
     
     
+    <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
+    
     <category term="blog" scheme="https://sergimansilla.com/tags/blog/"/>
     
     <category term="jekyll" scheme="https://sergimansilla.com/tags/jekyll/"/>
     
     <category term="life" scheme="https://sergimansilla.com/tags/life/"/>
-    
-    <category term="Technology" scheme="https://sergimansilla.com/tags/Technology/"/>
     
   </entry>
   
