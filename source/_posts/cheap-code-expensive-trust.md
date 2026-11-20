@@ -44,7 +44,7 @@ Nobody reviews everything with the same depth. Reviewers triage, and they triage
 
 AI makes every pull request look careful. Polish is now free, so it carries no information. Our reviewer saw tidy code from a trusted colleague, green tests, and did what reviewers have always done. We reviewed the syntax. Nobody checked for the missing tenant isolation filter.
 
-The reviewer wasn't lazy. They were reading a signal that had stopped meaning anything. And when the cheap signals go, the only way left to trust code is to understand it, which costs exactly what it always did. Code got cheap. Trust got more expensive.
+Were the reviewers sloppy? No, they were just reading a signal that had stopped meaning anything. And when the cheap signals go, the only way left to trust code is to understand it, which costs exactly what it always did. Code got cheap but trust got more expensive.
 
 ## Everyone is a junior somewhere
 
