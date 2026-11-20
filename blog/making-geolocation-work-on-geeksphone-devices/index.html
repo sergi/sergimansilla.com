@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Making geolocation work on Geeksphone devices | Sergi Mansilla</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#ffffff">
   <link rel="alternate" href="/atom.xml" title="Sergi Mansilla" type="application/atom+xml">
   
   
@@ -133,17 +133,17 @@
         
       </nav>
       <nav id="sub-nav">
-        <a id="nav-linkedin-link" href="https://www.linkedin.com/in/smansilla/" class="nav-icon" title="LinkedIn">
+        <a id="nav-linkedin-link" href="https://www.linkedin.com/in/smansilla/" class="nav-icon" title="LinkedIn" aria-label="LinkedIn">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
             <path fill="white"
               d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
           </svg>
         </a>
-        <a id="nav-github-link" class="nav-icon" href="https://github.com/sergi" title="GitHub">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/sergi" title="GitHub" aria-label="GitHub">
           <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg>
         </a>
         
-        <a id="nav-rss-link2" class="nav-icon" href="/atom.xml" title="RSS Feed">
+        <a id="nav-rss-link2" class="nav-icon" href="/atom.xml" title="RSS Feed" aria-label="RSS Feed">
           <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
             <path
               d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-12.832 20c-1.197 0-2.168-.969-2.168-2.165s.971-2.165 2.168-2.165 2.167.969 2.167 2.165-.97 2.165-2.167 2.165zm5.18 0c-.041-4.029-3.314-7.298-7.348-7.339v-3.207c5.814.041 10.518 4.739 10.561 10.546h-3.213zm5.441 0c-.021-7.063-5.736-12.761-12.789-12.792v-3.208c8.83.031 15.98 7.179 16 16h-3.211z" />
@@ -171,9 +171,9 @@
     </h1>
   
 
-    <a href="/blog/making-geolocation-work-on-geeksphone-devices/" class="article-date">
-  <time datetime="2014-05-01T05:28:11.000Z" itemprop="datePublished">May 1, 2014</time>
-</a>
+    
+  <time class="article-date" datetime="2014-05-01T05:28:11.000Z" itemprop="datePublished">May 1, 2014</time>
+
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -185,12 +185,12 @@
 <p>So, I set out to either make GPS work on my phone or to go back to my trusty iPhone and wait for another phone maker to come up with a Firefox OS compatible phone that matched the Revolution specs.</p>
 <p>After looking at many different sources and thanks to some good pointers from <a href="http://twitter.com/f_jimenez">Fernando Jiménez</a> and <a href="http://twitter.com/mepartoconmigo">Francisco Jordano</a>, I managed to make it work. Kind of. The hardware to make geolocation possible is definitely there, and the problem looks like it is a configuration one.</p>
 <p>I documented below the steps that made geolocation work for me on the Geeksphone Revolution:</p>
-<h4 id="Configuration-steps"><a href="#Configuration-steps" class="headerlink" title="Configuration steps"></a>Configuration steps</h4><p>Connect your phone to the computer, open a terminal and make sure you can see the phone using <em>adb</em>:</p>
+<h4 id="Configuration-steps"><a href="#Configuration-steps" class="headerlink" title="Configuration steps" aria-hidden="true" tabindex="-1"></a>Configuration steps</h4><p>Connect your phone to the computer, open a terminal and make sure you can see the phone using <em>adb</em>:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ adb devices List of devices attached FC7C80DF device</span><br></pre></td></tr></table></figure>
 <p>Retrieve the following files using <em>adb pull</em>:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ adb pull /system/b2g/defaults/pref/user.js</span><br><span class="line">$ adb pull /etc/gps.conf</span><br></pre></td></tr></table></figure>
 
-<h4 id="user-js"><a href="#user-js" class="headerlink" title="user.js"></a>user.js</h4><p>Change (or add) the properties <code>geo.gps.supl_server</code> and <code>geo.gps.supl_port</code> in <em>user.js</em> to user Google’s GPS server. My <em>user.js</em> file looks like this:</p>
+<h4 id="user-js"><a href="#user-js" class="headerlink" title="user.js" aria-hidden="true" tabindex="-1"></a>user.js</h4><p>Change (or add) the properties <code>geo.gps.supl_server</code> and <code>geo.gps.supl_port</code> in <em>user.js</em> to user Google’s GPS server. My <em>user.js</em> file looks like this:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pref(&#x27;browser.manifestURL&#x27;, &quot;app://system.gaiamobile.org/manifest.webapp&quot;); pref(&#x27;browser.homescreenURL&#x27;, &quot;app://system.gaiamobile.org/index.html&quot;); pref(&#x27;network.http.max-connections-per-server&#x27;, 15); pref(&#x27;dom.mozInputMethod.enabled&#x27;, true); pref(&#x27;ril.debugging.enabled&#x27;, false); pref(&#x27;dom.mms.version&#x27;, 17); pref(&#x27;b2g.wifi.allow_unsafe_wpa_eap&#x27;, true); pref(&#x27;network.dns.localDomains&#x27;, &quot;gaiamobile.org,calendar.gaiamobile.org,fl.gaiamobile.org,camera.gaiamobile.org,communications.gaiamobile.org,gallery.gaiamobile.org,keyboard.gaiamobile.org,video.gaiamobile.org,homescreen.gaiamobile.org,wallpaper.gaiamobile.org,music.gaiamobile.org,bluetooth.gaiamobile.org,ringtones.gaiamobile.org,sms.gaiamobile.org,wappush.gaiamobile.org,email.gaiamobile.org,setringtone.gaiamobile.org,browser.gaiamobile.org,system.gaiamobile.org,clock.gaiamobile.org,settings.gaiamobile.org,pdfjs.gaiamobile.org,costcontrol.gaiamobile.org,marketplace.firefox.com.gaiamobile.org&quot;); pref(&quot;app.update.url&quot;, &quot;http://gpfos.s3.amazonaws.com/revolution/update.xml&quot;); pref(&quot;geo.gps.supl_server&quot;, &quot;supl.google.com&quot;); pref(&quot;geo.gps.supl_port&quot;, 7276); pref(&quot;dom.payment.provider.0.name&quot;, &quot;firefoxmarket&quot;); pref(&quot;dom.payment.provider.0.description&quot;, &quot;marketplace.firefox.com&quot;); pref(&quot;dom.payment.provider.0.uri&quot;, &quot;https://marketplace.firefox.com/mozpay/?req=&quot;); pref(&quot;dom.payment.provider.0.type&quot;, &quot;mozilla/payments/pay/v1&quot;); pref(&quot;dom.payment.provider.0.requestMethod&quot;, &quot;GET&quot;);</span><br></pre></td></tr></table></figure>
 
 <p>####gps.conf</p>
@@ -204,7 +204,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ adb remount</span><br><span class="line">$ adb push user.js /system/b2g/defaults/pref/user.js</span><br><span class="line">$ adb push gps.conf /etc/gps.conf</span><br><span class="line">$ adb push SuplRootCert /etc/SuplRootCert</span><br><span class="line">$ adb reboot</span><br></pre></td></tr></table></figure>
 
 <p>After doing this my geolocation worked, even indoors. It still takes some seconds to retrieve the AGPS fix and sometimes doesn’t get it immediately, but I can say that it works well enough to not drive me mad. Good luck!</p>
-<h4 id="Sources"><a href="#Sources" class="headerlink" title="Sources"></a>Sources</h4><p><a href="http://blog.cryptomilk.org/2012/07/24/how-to-create-a-suplrootcert-for-supl-google-com/">How to create a SuplRootCert for supl.google.com</a><br><a href="http://forum.geeksphone.com/index.php?topic=5886.msg62928#msg62928">http://forum.geeksphone.com/index.php?topic=5886.msg62928#msg62928</a><br><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=955880">Bug 955880 - [GPS] GPS is not working anymore</a><br><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=908151">Bug 908151 - [Geeksphone][GPS] Speedup Geolocation response time, currently takes about 10 minutes</a><br><a href="http://forum.geeksphone.com/index.php?topic=5410.0">Forum: How can I enable A-GPS on my Peak?</a>&#96;&#96;</p>
+<h4 id="Sources"><a href="#Sources" class="headerlink" title="Sources" aria-hidden="true" tabindex="-1"></a>Sources</h4><p><a href="http://blog.cryptomilk.org/2012/07/24/how-to-create-a-suplrootcert-for-supl-google-com/">How to create a SuplRootCert for supl.google.com</a><br><a href="http://forum.geeksphone.com/index.php?topic=5886.msg62928#msg62928">http://forum.geeksphone.com/index.php?topic=5886.msg62928#msg62928</a><br><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=955880">Bug 955880 - [GPS] GPS is not working anymore</a><br><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=908151">Bug 908151 - [Geeksphone][GPS] Speedup Geolocation response time, currently takes about 10 minutes</a><br><a href="http://forum.geeksphone.com/index.php?topic=5410.0">Forum: How can I enable A-GPS on my Peak?</a>&#96;&#96;</p>
 
       
     </div>
@@ -270,5 +270,26 @@
 
 
   </div>
-</body>
+<!-- hexo injector body_end start -->
+<button type="button" id="back-to-top" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<script>
+  (function () {
+    var btn = document.getElementById('back-to-top');
+    if (!btn) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function onScroll() {
+      btn.classList.toggle('visible', window.scrollY > 600);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: reduce.matches ? 'auto' : 'smooth' });
+    });
+  })();
+</script><!-- hexo injector body_end end --></body>
 </html>

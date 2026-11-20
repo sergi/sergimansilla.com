@@ -125,7 +125,7 @@ body,
 }
 body {
   background: #fff;
-  font: 20px "PT Serif", Garamond, Georgia, serif;
+  font: 20px Georgia, Cambria, "Times New Roman", Times, serif;
   -webkit-text-size-adjust: 100%;
 }
 .outer {
@@ -409,7 +409,7 @@ body {
   }
 }
 a.article-title:hover {
-  color: #258fb8;
+  color: #1b6e8e;
 }
 .article-entry {
   color: #373737;
@@ -450,7 +450,7 @@ a.article-title:hover {
   margin: 1.8em 0 0.6em;
 }
 .article-entry a {
-  color: #258fb8;
+  color: #1b6e8e;
   text-decoration: none;
 }
 .article-entry a:hover {
@@ -498,7 +498,7 @@ a.article-title:hover {
   position: relative;
 }
 .article-entry blockquote:before {
-  font-family: "PT Serif", Garamond, Georgia, serif;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   content: "\201C";
   color: #555;
   font-size: 4em;
@@ -512,7 +512,7 @@ a.article-title:hover {
 .article-entry blockquote footer {
   font-size: 20px;
   margin: 1.7em 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 .article-entry blockquote footer cite:before {
   content: "—";
@@ -566,10 +566,10 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-more-link a:hover {
-  background: #258fb8;
+  background: #1b6e8e;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 1px #1e7293;
+  text-shadow: 0 1px #165872;
 }
 .article-footer {
   font-size: 0.85em;
@@ -703,7 +703,7 @@ a.article-title:hover {
   margin: 50px 0;
 }
 #comments a {
-  color: #258fb8;
+  color: #1b6e8e;
 }
 .archives-wrap {
   margin: 50px 0;
@@ -759,7 +759,7 @@ a.article-title:hover {
   line-height: 1.7em;
 }
 .archive-article-title:hover {
-  color: #258fb8;
+  color: #1b6e8e;
 }
 .archive-article-footer {
   margin-top: 1em;
@@ -836,7 +836,7 @@ a.article-title:hover {
   text-decoration: none;
 }
 #footer a:hover {
-  color: #258fb8;
+  color: #1b6e8e;
 }
 #footer-info {
   line-height: 1.7em;
@@ -864,12 +864,12 @@ a.article-title:hover {
   font-size: 0.85em;
 }
 .article-entry pre {
-  font-family: "PT Mono", "Source Code Pro", Consolas, Menlo, Monaco, monospace;
+  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
   font-size: 16px;
 }
 .article-entry code {
   background: #f3f3f3;
-  font-family: "PT Mono", "Source Code Pro", Consolas, Menlo, Monaco, monospace;
+  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
   font-size: 0.82em;
   line-height: 1;
   border-radius: 3px;
@@ -931,7 +931,7 @@ a.article-title:hover {
 }
 .article-entry .gist .gist-file {
   border: none;
-  font-family: "PT Mono", "Source Code Pro", Consolas, Menlo, Monaco, monospace;
+  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
   margin: 0;
 }
 .article-entry .gist .gist-file .gist-data {
@@ -954,14 +954,14 @@ a.article-title:hover {
 .article-entry .gist .gist-file .gist-meta {
   background: #2d2d2d;
   color: #999;
-  font: 0.85em 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font: 0.85em -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
   margin-left: 0px;
 }
 .article-entry .gist .gist-file .gist-meta a {
-  color: #258fb8;
+  color: #1b6e8e;
   font-weight: normal;
 }
 .article-entry .gist .gist-file .gist-meta a:hover {
@@ -1062,14 +1062,21 @@ body.page-about #header-title {
   visibility: visible;
 }
 
-/* Only the About page shows a title below the nav bar, so only it needs the
-   taller header. */
+/* Only the About page shows a title below the nav bar. The header is
+   tall enough that the title sits level with post titles (~110px from
+   the top) and the article starts right below it. */
 body.page-about #header {
-  height: 100px;
+  height: 150px;
 }
 
 body.page-about .article {
-  margin-top: 24px;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 479px) {
+  body.page-about #header {
+    height: 130px;
+  }
 }
 
 /* The About page already has the site title in the header; hide the
@@ -1109,13 +1116,14 @@ body.page-about .article-header {
   border-bottom: 2px solid #373737;
 }
 
-/* Match the space above post titles. */
-.archives-wrap:first-of-type .archive-year-wrap {
+/* Match the space above the homepage's "Recent articles" heading.
+   (On /archives the new page title occupies this slot instead.) */
+.page-home .archives-wrap:first-of-type .archive-year-wrap {
   margin-top: 50px;
 }
 
 @media screen and (max-width: 479px) {
-  .archives-wrap:first-of-type .archive-year-wrap {
+  .page-home .archives-wrap:first-of-type .archive-year-wrap {
     margin-top: 32px;
   }
 }
@@ -1175,7 +1183,7 @@ body.page-about .article-header {
 }
 
 .archive-article-title:hover {
-  color: #258fb8;
+  color: #1b6e8e;
 }
 
 @media screen and (max-width: 479px) {
@@ -1187,4 +1195,361 @@ body.page-about .article-header {
     display: block;
     margin-bottom: 0.3em;
   }
+}
+
+/* ------------------------------------------------------------------ */
+/* UI/UX accessibility and polish pass                                  */
+/* ------------------------------------------------------------------ */
+
+/* Sticky header: keep the nav reachable on long pages. */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Body links: underlined at rest and AA-compliant in color. The
+   theme underlines only on :hover, which never fires on touch. */
+.article-entry a {
+  text-decoration: underline;
+  text-decoration-underline-offset: 2px;
+}
+
+.article-entry a:hover {
+  color: #155a76;
+}
+
+.article-entry a:visited {
+  color: #14526b;
+}
+
+/* Decorative heading anchors and the "Read More" button stay clean. */
+.article-entry a.headerlink {
+  text-decoration: none;
+}
+
+.article-more-link a,
+.article-more-link a:hover {
+  text-decoration: none;
+}
+
+/* Visible keyboard focus for every link, including the white icons
+   on the black bar. */
+a:focus-visible,
+.nav-icon:focus-visible,
+.main-nav-link:focus-visible {
+  outline: 2px solid #1b6e8e;
+  outline-offset: 2px;
+}
+
+#main-nav a:focus-visible,
+#sub-nav a:focus-visible {
+  outline-color: #fff;
+}
+
+/* Reading measure: ~90 characters per line was too long for 20px
+   serif. Cap prose at ~700px; code blocks and figures stay full
+   width. */
+.article-entry p,
+.article-entry ul,
+.article-entry ol,
+.article-entry blockquote,
+.article-entry h1, .article-entry h2,
+.article-entry h3, .article-entry h4 {
+  max-width: 700px;
+}
+
+/* Blockquotes were 1.4em — larger than the section headings that
+   introduce them — and their fixed 80% width plus padding overflows
+   the 350px mobile column. */
+.article-entry blockquote {
+  box-sizing: border-box;
+  width: auto;
+  font-size: inherit;
+  padding: 1.2em 30px 1.2em 60px;
+}
+
+/* A little air between list items (the About page ran together). */
+.article-entry li {
+  margin-bottom: 0.45em;
+}
+
+/* Tag chips: real tap targets instead of bare ~22px-tall text. */
+.article-tag-list-item {
+  margin: 0 8px 8px 0;
+}
+
+.article-tag-list-link {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #f2f2f2;
+  border-radius: 4px;
+  color: #555;
+  text-decoration: none;
+}
+
+.article-tag-list-link:hover,
+.article-tag-list-link:focus-visible {
+  background: #e8e8e8;
+  color: #373737;
+}
+
+/* Code blocks: brighter line numbers, a fade cue at the right edge
+   showing there is more to scroll, and a slimmer scrollbar. */
+.article-entry .highlight .gutter pre {
+  color: #858585;
+}
+
+.article-entry figure.highlight {
+  position: relative;
+}
+
+.article-entry figure.highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 36px;
+  background: linear-gradient(90deg, transparent, #2d2d2d);
+  pointer-events: none;
+}
+
+.article-entry figure.highlight pre {
+  scrollbar-width: thin;
+}
+
+/* Inline code: a notch larger and more visible next to 20px serif. */
+.article-entry code {
+  background: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  font-size: 0.85em;
+  padding: 0.1em 0.35em;
+}
+
+/* Small-text floor: #999 is 2.85:1 on white, below the AA 4.5:1
+   minimum. #767676 is 4.54:1. */
+.article-nav-caption,
+#footer,
+#footer-info {
+  color: #767676;
+}
+
+#footer a {
+  color: #767676;
+}
+
+#footer a:hover {
+  color: #373737;
+  text-decoration: underline;
+}
+
+/* Footer rule aligned to the content column, matching the article
+   footer above it (.outer has 10px side padding, so the border goes
+   on .inner, which spans exactly the column). */
+#footer {
+  border-top: 0;
+  padding: 30px 0 40px;
+}
+
+#footer .outer {
+  border-top: 0;
+}
+
+#footer-info {
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+
+/* Post navigation (OLDER/NEWER): full-width rows aligned to the
+   column instead of a half-width centered box. */
+.article-nav-link-wrap {
+  text-align: left;
+  border-top: 1px solid #ddd;
+  padding-top: 1.2em;
+  margin-top: 60px;
+}
+
+.article-nav-link-wrap .article-nav-caption {
+  font-size: 0.8em;
+}
+
+.article-nav-link-wrap .article-nav-title {
+  font-size: 1em;
+  font-weight: 600;
+  color: #373737;
+}
+
+@media screen and (min-width: 768px) {
+  #article-nav-newer,
+  #article-nav-older {
+    float: none;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+/* Archives: years read as small labels, titles as the content. */
+.archive-year {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #767676;
+}
+
+.archive-year-wrap {
+  border-bottom: 2px solid #373737;
+}
+
+.archive-article-header h1 {
+  font-weight: 500;
+}
+
+.archive-article-date {
+  color: #767676;
+}
+
+.archive-page-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #373737;
+  line-height: 1.1em;
+  margin: 50px 0 0;
+}
+
+body.page-archive .archives-wrap:first-of-type .archive-year-wrap {
+  margin-top: 2.5em;
+}
+
+/* Homepage: the "All articles" link under the recent list. */
+#all-articles-link {
+  margin: 1.5em 0 0;
+}
+
+#all-articles-link a {
+  color: #1b6e8e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#all-articles-link a:hover {
+  text-decoration: underline;
+}
+
+#all-articles-link a:visited {
+  color: #14526b;
+}
+
+/* About page: header title matches post titles (left, bold) instead
+   of the centered light default. left matches .outer's side padding
+   because absolutely positioned elements align to the padding box. */
+body.page-about #header-title {
+  text-align: left;
+  left: 10px;
+}
+
+@media screen and (max-width: 479px) {
+  body.page-about #header-title {
+    left: 20px;
+  }
+}
+
+body.page-about #logo {
+  font-weight: bold;
+}
+
+/* Back-to-top button (injected by scripts/back-to-top.js). The white
+   ring and shadow keep it visible over dark code blocks too. */
+#back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  background: #373737;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 90;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top:hover {
+  background: #000;
+}
+
+#back-to-top:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #back-to-top {
+    transition: none;
+  }
+}
+
+/* Mobile: 44px nav bar with 44px tap targets for icons and tags. */
+@media screen and (max-width: 479px) {
+  #header {
+    height: 44px;
+  }
+
+  #header::before {
+    height: 44px;
+  }
+
+  #main-nav .main-nav-link,
+  #sub-nav .nav-icon {
+    padding: 12px 12px;
+  }
+
+  .home-nav-link {
+    padding: 12px;
+  }
+
+  .article-tag-list-link {
+    padding: 12px;
+  }
+
+  .article-more-link a {
+    padding: 13px 20px;
+  }
+}
+
+/* "Read More": the theme styles it as white-on-white, so it reads as
+   plain text instead of a button. Give it a visible chip; hover keeps
+   the teal fill from the theme. */
+.article-more-link a {
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  text-shadow: none;
+}
+
+.article-more-link a:hover {
+  border-color: #1b6e8e;
+}
+
+/* Active nav item: full opacity plus a short underline on the bar.
+   Body classes come from scripts/page-classes.js. */
+body.page-home #main-nav .home-nav-link,
+body.page-about #main-nav a[href*="/about"],
+body.page-archive #main-nav a[href*="/archives"],
+body.page-tag #main-nav a[href*="/archives"],
+body.page-category #main-nav a[href*="/archives"] {
+  opacity: 1;
+  box-shadow: inset 0 -3px 0 rgba(255, 255, 255, 0.85);
 }
