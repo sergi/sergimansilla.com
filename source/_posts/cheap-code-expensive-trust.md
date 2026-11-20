@@ -56,7 +56,8 @@ With an agent, you can ship there for months without building that understanding
 
 ## What I'm doing about it
 
-Engineering teams now use agents every day, and I have zero interest in going back. Whatever you make of the productivity claims, writing code was never the hard part of serious software development. I realize that you've probably read [some version of that sentence](https://ordep.dev/posts/writing-code-was-never-the-bottleneck) this year.  
+Engineering teams now use agents every day, and I have zero interest in going back. Whatever you make of the productivity claims, writing code was never the hard part of serious software development. I realize that you've probably read [some version of that sentence](https://ordep.dev/posts/writing-code-was-never-the-bottleneck) this year.
+
 The fix is accepting that when generation is free, alignment and verification are the constraints. Three rules I'd like teams to follow:
 
 1. **Design before generation.** If a change touches core architecture, security boundaries, or data contracts, explicitly write down the unwritten rules in our heads before anyone prompts an agent. A rule that lives only in people's heads is invisible to the agent and easy for a reviewer to forget. Had that authorization boundary been written down, the agent and the reviewer would each have something to check against.  
